@@ -6,7 +6,7 @@ export const GameHeader = ({ title, onBackToMenu }) => {
       </h1>
       <button
         onClick={onBackToMenu}
-        className="text-black w-full sm:w-auto px-4 py-2 bg-gray-500 rounded hover:bg-gray-600 transition-colors duration-200 text-sm sm:text-base"
+        className="text-white md:text-black w-full sm:w-auto px-4 py-2 bg-gray-500 rounded hover:bg-gray-600 transition-colors duration-200 text-sm sm:text-base"
       >
         Back to Menu
       </button>

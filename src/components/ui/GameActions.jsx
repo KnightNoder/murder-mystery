@@ -11,7 +11,7 @@ export const GameActions = ({
       {revealedClues < totalClues && gameState === "playing" && (
         <button
           onClick={onRevealClue}
-          className="w-full px-4 py-3 bg-blue-500 text-black rounded-lg hover:bg-blue-600 transition-colors duration-200 font-medium"
+          className="text-white w-full px-4 py-3 bg-blue-500 md:text-black rounded-lg hover:bg-blue-600 transition-colors duration-200 font-medium"
         >
           Reveal Next Clue ({revealedClues}/{totalClues})
         </button>
