@@ -88,33 +88,33 @@ const KillerSearchGame = () => {
   const scenario = gameScenarios[currentScenario];
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-4">
+    <div className="max-w-full min-h-screen flex items-center justify-center bg-slate-900 text-white p-4">
       <div className="bg-white/5 border border-white/10 rounded-2xl p-6 w-full max-w-full shadow-xl backdrop-blur">
-      <GameContainer 
-        scenario={scenario} 
-        gameState={gameState} 
-        onBackToMenu={backToMenu}
-      >
-        <SuspectsList 
-          suspects={scenario.suspects}
-          showSolution={showSolution}
-          selectedSuspect={selectedSuspect}
-          onSelectSuspect={selectSuspect}
-        />
-
-        <GameSidebar 
+        <GameContainer
           scenario={scenario}
-          revealedClues={revealedClues}
           gameState={gameState}
-          selectedSuspect={selectedSuspect}
-          showSolution={showSolution}
-          onRevealClue={revealMoreClues}
-          onMakeAccusation={makeAccusation}
-          onTryAgain={tryAgain}
-        />
-      </GameContainer>
+          onBackToMenu={backToMenu}
+        >
+          <SuspectsList
+            suspects={scenario.suspects}
+            showSolution={showSolution}
+            selectedSuspect={selectedSuspect}
+            onSelectSuspect={selectSuspect}
+          />
+
+          <GameSidebar
+            scenario={scenario}
+            revealedClues={revealedClues}
+            gameState={gameState}
+            selectedSuspect={selectedSuspect}
+            showSolution={showSolution}
+            onRevealClue={revealMoreClues}
+            onMakeAccusation={makeAccusation}
+            onTryAgain={tryAgain}
+          />
+        </GameContainer>
+      </div>
     </div>
-  </div>
   );
 };
 
