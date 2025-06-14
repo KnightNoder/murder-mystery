@@ -1,1121 +1,2911 @@
 export const gameScenarios = [
   {
     id: 1,
-    title: "The IT Park Murder",
+    title: "The Society Secretary's Fall",
     description:
-      "Priya Sharma, a 42-year-old software project manager, was found dead in her cabin at Tech Tower, Gurgaon at 11:30 PM. She was working late to meet a client deadline when someone entered her cabin and stabbed her with a paper knife. The security system showed three people had access to the building that evening.",
+      "Rajesh Malhotra, secretary of Shanti Apartments housing society in Gurgaon, was found dead at the bottom of the building's staircase during the monthly society meeting. What appeared to be an accidental fall was actually murder - someone pushed him down the stairs after hitting him with a cricket bat from the building's sports room.",
     clues: [
-      "Priya was killed between 10:30-11:30 PM with a paper knife from her own desk",
-      "The killer left muddy footprints size 9 leading towards the fire exit",
-      "Priya's laptop shows she discovered ₹15 lakh missing from project funds",
-      "Her cabin door was locked from inside, suggesting she trusted her killer",
-      "A tea cup with sindoor marks was found on her desk - but Priya was unmarried",
+      "Rajesh died between 8:30-9:00 PM during the society meeting break",
+      "A cricket bat with blood stains was found hidden in the electrical room",
+      "The staircase railing was recently oiled, making it extra slippery",
+      "Society maintenance fund records show ₹8 lakh missing from recent collections",
+      "Rajesh's phone contains voice recordings of heated arguments about fund misuse",
+    ],
+    suspects: [
+      {
+        id: 1,
+        name: "Priya Sharma",
+        age: 34,
+        role: "Treasurer & Working Mom",
+        details:
+          "Society treasurer and software engineer who discovered Rajesh was embezzling maintenance funds for his son's abroad education. Recently had public argument with Rajesh about financial transparency.",
+        motive:
+          "Rajesh was stealing society money and threatening to blame the missing funds on her",
+        alibi:
+          "Claims she was in the meeting room discussing water supply issues with other residents",
+        evidence:
+          "Meeting attendees confirm she stepped out for 'personal call' during break time",
+      },
+      {
+        id: 2,
+        name: "Suresh Uncle",
+        age: 61,
+        role: "Retired Bank Manager & Society Elder",
+        details:
+          "Retired resident who wanted to become society secretary but was defeated by Rajesh in recent elections. Known for his morning walks and evening cricket sessions with building kids.",
+        motive:
+          "Felt humiliated by election loss and believed Rajesh was too young and irresponsible for the role",
+        alibi: "Says he was smoking on the terrace and enjoying evening breeze",
+        evidence:
+          "Terrace door was locked during meeting time, and he had access to sports room cricket bats",
+      },
+      {
+        id: 3,
+        name: "Karan Gupta",
+        age: 29,
+        role: "Gym Trainer & Rajesh's Tenant",
+        details:
+          "Fitness trainer who rents Rajesh's parking space for his gym equipment storage. Recently served eviction notice by Rajesh for unauthorized commercial use of residential premises.",
+        motive:
+          "Eviction would destroy his home gym business and force him to find expensive commercial space",
+        alibi: "Claims he was working out in the building's common gym area",
+        evidence:
+          "Gym area was empty during break time, and he's physically strong enough to overpower Rajesh",
+      },
+    ],
+    killer: 1,
+    solution:
+      "Priya Sharma killed Rajesh. As treasurer, she discovered his embezzlement, stepped out during the meeting break when she had opportunity, and faced being framed for the missing ₹8 lakh if Rajesh's theft was exposed.",
+  },
+
+  {
+    id: 2,
+    title: "The Coaching Class Poisoning",
+    description:
+      "Mr. Anil Verma, owner of 'Success IIT Coaching' in Kota, was found dead in his office from cyanide poisoning mixed in his evening chai. The murder happened during the dinner break between evening batches when the building was mostly empty except for a few staff members and students.",
+    clues: [
+      "Anil died from cyanide poisoning around 8:15 PM during dinner break",
+      "The poison was specifically in his special 'extra strong' chai that he drank daily",
+      "His computer showed emails about 'fake placement statistics' investigation",
+      "Recent student suicide note mentioned 'false promises and mental torture'",
+      "Chemistry lab storage room was found unlocked with potassium cyanide missing",
+    ],
+    suspects: [
+      {
+        id: 1,
+        name: "Dr. Meera Joshi",
+        age: 43,
+        role: "Chemistry Faculty & Single Mother",
+        details:
+          "Senior chemistry teacher who discovered Anil was inflating placement statistics and pressuring her to give passing marks to weak students who paid extra fees. Has access to chemistry lab and knows about cyanide preparation.",
+        motive:
+          "Anil threatened to fire her if she didn't cooperate with grade manipulation, destroying her only source of income",
+        alibi:
+          "Claims she was preparing chemistry practicals for next day's class",
+        evidence:
+          "Lab preparation records show no work scheduled, and she has expert knowledge of cyanide",
+      },
+      {
+        id: 2,
+        name: "Rohit Malhotra",
+        age: 28,
+        role: "Admin Manager & Frustrated Employee",
+        details:
+          "Handles admissions and student records, recently forced by Anil to create fake placement certificates for marketing purposes. Engineering graduate who couldn't clear JEE and ended up in administrative job.",
+        motive:
+          "Anil was making him forge documents for fake placements, risking criminal charges",
+        alibi: "Says he was updating student attendance records in his office",
+        evidence: "Computer logs show no attendance updates during murder time",
+      },
+      {
+        id: 3,
+        name: "Kavya Sharma",
+        age: 17,
+        role: "Dropper Student & Coaching Victim",
+        details:
+          "Second-time JEE aspirant whose previous year's failure led to severe depression. Recently discovered Anil was giving her false hope about admission chances while knowing her preparation was inadequate.",
+        motive:
+          "Anil's false promises destroyed her mental health and academic future",
+        alibi: "Claims she was studying in the library during dinner break",
+        evidence:
+          "Library was closed during dinner break, and she attended chemistry classes with access to lab",
+      },
+      {
+        id: 4,
+        name: "Rajesh Verma",
+        age: 51,
+        role: "Anil's Business Partner & Co-owner",
+        details:
+          "Co-founded the coaching institute but recently discovered Anil was planning to sell his share to a corporate chain without his consent. Handles finance and tea/snack supplies for staff.",
+        motive:
+          "Anil's secret deal would cheat him out of his rightful share of the business",
+        alibi:
+          "Says he was meeting with a potential corporate buyer in a nearby café",
+        evidence:
+          "No meeting was scheduled according to café staff, and he supplied Anil's daily chai",
+      },
+    ],
+    killer: 1,
+    solution:
+      "Dr. Meera Joshi killed Anil. She had access to potassium cyanide from the chemistry lab, faced job loss for refusing to manipulate grades, and her lab preparation alibi was false as no work was scheduled.",
+  },
+
+  {
+    id: 3,
+    title: "The Marriage Bureau Murder",
+    description:
+      "Mrs. Sunita Agarwal, owner of 'Perfect Match Marriage Bureau' in Delhi, was found strangled with a dupatta in her office during evening consultation hours. The murder weapon was taken from her own collection of sample wedding outfits. Three clients and two staff members were present in the building.",
+    clues: [
+      "Sunita was strangled with a red silk dupatta between 7:00-7:30 PM",
+      "Her computer showed threatening emails about 'fake profiles and cheating'",
+      "Client files reveal she was blackmailing married men who used fake profiles",
+      "₹15 lakh in cash was found hidden in her office safe - unusual for a small business",
+      "CCTV footage shows someone entering her office wearing a ghunghat to hide identity",
+    ],
+    suspects: [
+      {
+        id: 1,
+        name: "Rakesh Singh",
+        age: 35,
+        role: "Married IT Professional & Secret Client",
+        details:
+          "Software engineer who created fake profile claiming to be divorced while still married. Recently caught by Sunita who demanded ₹5 lakh to keep quiet about his deception.",
+        motive:
+          "Sunita's blackmail threatened to destroy his marriage and career if his wife discovered the truth",
+        alibi:
+          "Claims he was in official consultation about 'his sister's marriage'",
+        evidence:
+          "No sister exists according to family records he provided earlier",
+      },
+      {
+        id: 2,
+        name: "Pooja Malhotra",
+        age: 28,
+        role: "Rejected Bride & Vengeful Client",
+        details:
+          "Dentist whose marriage was cancelled when Sunita revealed false information about her family background to extract more commission from the groom's family.",
+        motive:
+          "Sunita's greed and manipulation destroyed her marriage prospects and social reputation",
+        alibi: "Says she was consulting about new matrimonial requirements",
+        evidence: "She was seen wearing a ghunghat similar to the CCTV footage",
+      },
+      {
+        id: 3,
+        name: "Neha Gupta",
+        age: 24,
+        role: "Junior Counselor & Underpaid Employee",
+        details:
+          "Marriage counselor who discovered Sunita was running fake profile scams and keeping all blackmail money. Recently threatened with termination for questioning unethical practices.",
+        motive:
+          "Sunita was involving her in illegal activities and threatening to frame her if exposed",
+        alibi: "Claims she was organizing client files in the records room",
+        evidence:
+          "Records room was locked during murder time according to security",
+      },
+      {
+        id: 4,
+        name: "Dr. Rajesh Verma",
+        age: 42,
+        role: "Divorced Doctor & Premium Client",
+        details:
+          "Successful surgeon paying premium fees for 'guaranteed match' service. Recently discovered Sunita was showing his profile to multiple families simultaneously and collecting fees from all.",
+        motive:
+          "Sunita was cheating him out of lakhs while destroying his reputation with multiple rejections",
+        alibi: "Says he was waiting in consultation room for his appointment",
+        evidence: "Appointment book shows no meeting scheduled for that time",
+      },
+      {
+        id: 5,
+        name: "Anita Shah",
+        age: 39,
+        role: "Receptionist & Financial Handler",
+        details:
+          "Handles client payments and appointments, recently discovered by Sunita to be skimming cash from client fees. Single mother desperately needing job to support two children.",
+        motive:
+          "Sunita was filing police complaint for theft, leading to arrest and loss of children's support",
+        alibi: "Claims she was managing reception and client appointments",
+        evidence:
+          "Reception desk was unattended during murder time according to other clients",
+      },
+    ],
+    killer: 1,
+    solution:
+      "Rakesh Singh killed Sunita. He had the strongest motive to stop her blackmail that threatened his marriage, his 'sister's marriage' consultation was fake, and he used the ghunghat disguise to hide his identity while entering her office.",
+  },
+
+  {
+    id: 4,
+    title: "The Corporate Office Elevator Death",
+    description:
+      "Amit Kapoor, HR Director of TechnoSoft Solutions in Bangalore, was found dead in the office elevator shaft after the cable was deliberately cut. The elevator plunged from the 12th floor during late evening overtime work. Security cameras captured multiple people working late, but the elevator's internal camera was mysteriously disabled.",
+    clues: [
+      "Amit died in elevator fall around 9:45 PM during overtime work session",
+      "Elevator cables were professionally cut with industrial tools from maintenance room",
+      "His laptop contained resignation letters he was preparing to fire multiple employees",
+      "Recent sexual harassment complaints were filed against him by female employees",
+      "Elevator maintenance records show fake service entry logged for that evening",
+    ],
+    suspects: [
+      {
+        id: 1,
+        name: "Priyanka Das",
+        age: 29,
+        role: "Senior Software Engineer & Harassment Victim",
+        details:
+          "Team lead who filed sexual harassment complaint against Amit but was being pressured to withdraw it. Recently discovered Amit was planning to terminate her for 'performance issues' in retaliation.",
+        motive:
+          "Amit was destroying her career and mental health through harassment and retaliation",
+        alibi:
+          "Claims she was debugging code in her workstation on the 8th floor",
+        evidence:
+          "Code commits show no activity during murder time, and she has access to maintenance areas",
+      },
+      {
+        id: 2,
+        name: "Suresh Kumar",
+        age: 44,
+        role: "Facilities Manager & Technical Expert",
+        details:
+          "Manages building maintenance and elevator systems. Recently threatened by Amit with termination for 'cost-cutting' after 15 years of service to reduce operational expenses.",
+        motive:
+          "Termination at his age would make finding new job nearly impossible",
+        alibi: "Says he was checking HVAC systems on different floors",
+        evidence:
+          "HVAC logs show no maintenance work, and he has expert knowledge of elevator mechanics",
+      },
+      {
+        id: 3,
+        name: "Rajesh Malhotra",
+        age: 36,
+        role: "Finance Manager & Whistleblower",
+        details:
+          "Discovered Amit was embezzling company funds through fake vendor payments. Recently threatened by Amit with false accusations of financial fraud if he reported the embezzlement.",
+        motive:
+          "Amit planned to frame him for the embezzlement and destroy his career",
+        alibi:
+          "Claims he was preparing month-end financial reports in accounts section",
+        evidence:
+          "Financial system shows no report generation during murder time",
+      },
+      {
+        id: 4,
+        name: "Kavya Singh",
+        age: 26,
+        role: "Security Supervisor & Night Shift Worker",
+        details:
+          "Head of night security who discovered Amit was manipulating CCTV footage to cover up his inappropriate behavior. Recently blackmailed by Amit to provide false security reports.",
+        motive:
+          "Amit was forcing her to be complicit in covering up harassment cases",
+        alibi: "Says she was conducting security rounds on various floors",
+        evidence:
+          "Security logs show no recorded rounds during murder time, and she could disable elevator camera",
+      },
+      {
+        id: 5,
+        name: "Dr. Anita Verma",
+        age: 32,
+        role: "Company Doctor & Medical Officer",
+        details:
+          "On-site medical officer who was pressured by Amit to declare harassment victims as 'mentally unstable' in medical reports. Recently threatened with license cancellation for refusing to cooperate.",
+        motive:
+          "Amit was trying to destroy her medical career for not supporting his harassment cover-up",
+        alibi: "Claims she was organizing medical records in the clinic",
+        evidence:
+          "Medical clinic was locked during overtime hours according to building security",
+      },
+    ],
+    killer: 2,
+    solution:
+      "Suresh Kumar killed Amit. As facilities manager, he had expert knowledge of elevator mechanics and access to industrial cutting tools, faced job termination after 15 years of service, and his HVAC maintenance alibi was false as no work was logged.",
+  },
+
+  {
+    id: 5,
+    title: "The Neighborhood WhatsApp Admin Murder",
+    description:
+      "Mrs. Kavita Sharma, admin of 'Green Park Society' WhatsApp group and local busybody, was found dead from pesticide poisoning in her kitchen garden. She was known for exposing everyone's secrets through the neighborhood group. The poison was mixed in her morning gardening water bottle during her daily 6 AM gardening routine.",
+    clues: [
+      "Kavita died from organophosphate pesticide poisoning around 6:30 AM while gardening",
+      "Her water bottle contained concentrated pesticide mixed with regular drinking water",
+      "Her phone shows she was preparing to expose someone's 'big secret' in the group that morning",
+      "Recent WhatsApp messages reveal she was blackmailing neighbors with compromising information",
+      "Garden shed shows signs of recent break-in with pesticide bottles rearranged",
+    ],
+    suspects: [
+      {
+        id: 1,
+        name: "Ramesh Uncle",
+        age: 58,
+        role: "Retired Teacher & Respected Neighbor",
+        details:
+          "Respected colony elder whose son's drug addiction was recently discovered by Kavita. She threatened to expose this in the society group, destroying his family's reputation.",
+        motive:
+          "Kavita's exposure would destroy his family honor and his son's marriage prospects",
+        alibi: "Claims he was doing morning yoga on his terrace",
+        evidence:
+          "Terrace showed no yoga mat or signs of recent use during morning time",
+      },
+      {
+        id: 2,
+        name: "Preeti Malhotra",
+        age: 34,
+        role: "Homemaker & Secret Affair Partner",
+        details:
+          "Married woman having affair with delivery boy which Kavita discovered and photographed. Recently blackmailed by Kavita for ₹2 lakh to keep quiet about the relationship.",
+        motive: "Exposure would destroy her marriage and family life",
+        alibi:
+          "Says she was preparing breakfast and getting kids ready for school",
+        evidence:
+          "Kids confirm mother was unusually absent from kitchen during morning routine",
+      },
+      {
+        id: 3,
+        name: "Rohit Sharma",
+        age: 31,
+        role: "Software Engineer & Kavita's Husband",
+        details:
+          "Kavita's husband who recently discovered she was blackmailing neighbors and making enemies. Feared for family safety due to her dangerous gossip activities.",
+        motive:
+          "Kavita's blackmail activities were putting their family in danger from angry neighbors",
+        alibi: "Claims he was getting ready for office and didn't go to garden",
+        evidence:
+          "Neighbors saw him near garden shed early morning before Kavita's gardening time",
+      },
+      {
+        id: 4,
+        name: "Dr. Anjali Gupta",
+        age: 42,
+        role: "Dentist & Illegal Practice Runner",
+        details:
+          "Runs unlicensed dental practice from home which Kavita discovered. Recently threatened by Kavita with medical board complaint unless she paid monthly 'silence fees'.",
+        motive:
+          "Exposure would end her illegal practice and result in license cancellation",
+        alibi: "Says she was preparing for morning patient appointments",
+        evidence:
+          "No patients were scheduled for early morning according to her appointment book",
+      },
+      {
+        id: 5,
+        name: "Karan Verma",
+        age: 28,
+        role: "Delivery Executive & Affair Partner",
+        details:
+          "Food delivery worker having affair with Preeti, which Kavita was planning to expose with photos. Recently threatened by Kavita to stop the relationship or face public shame.",
+        motive:
+          "Exposure would destroy his relationship and reputation in the neighborhood",
+        alibi:
+          "Claims he was starting morning delivery rounds in different area",
+        evidence:
+          "GPS tracking shows he was in Green Park area during murder time, not at assigned delivery zone",
+      },
+      {
+        id: 6,
+        name: "Sunita Auntie",
+        age: 51,
+        role: "Housewife & Financial Fraudster",
+        details:
+          "Runs illegal chit fund scheme in the colony which Kavita discovered after several neighbors lost money. Recently exposed by Kavita's investigation into missing payments.",
+        motive:
+          "Kavita's exposure would lead to criminal charges for financial fraud",
+        alibi: "Says she was attending morning temple prayers",
+        evidence:
+          "Temple priest confirms no early morning prayers were conducted that day",
+      },
+    ],
+    killer: 2,
+    solution:
+      "Preeti Malhotra killed Kavita. She had the strongest motive as exposure of her affair would destroy her marriage, was missing from kitchen during critical time when kids needed breakfast preparation, and had access to pesticides from her own garden maintenance.",
+  },
+
+  {
+    id: 6,
+    title: "The Zomato Driver's Last Delivery",
+    description:
+      "Vikash Kumar, a popular Zomato delivery executive in Mumbai, was found dead from anaphylactic shock in his delivery bike's storage box. Someone had planted peanuts (to which he was severely allergic) in a fake food order. His phone showed he was about to expose a major food delivery scam involving fake restaurants and inflated bills.",
+    clues: [
+      "Vikash died from severe allergic reaction to peanuts around 8:30 PM during dinner rush",
+      "Fake food order was placed from 'Royal Kitchen' - a restaurant that doesn't exist",
+      "His phone contains evidence of 'ghost kitchen' scam involving inflated delivery charges",
+      "₹45,000 in cash was found hidden in his bike's secret compartment",
+      "GPS tracking shows he deviated from normal delivery route to meet someone",
+      "His EpiPen was deliberately removed from his emergency medical kit"
+    ],
+    suspects: [
+      {
+        id: 1,
+        name: "Rajesh Pandey",
+        age: 33,
+        role: "Zomato Area Manager & Corrupt Official",
+        details:
+          "Regional manager who was running fake restaurant scam with inflated delivery fees. Recently discovered by Vikash who was collecting evidence to report to company headquarters.",
+        motive:
+          "Vikash's evidence would expose his ₹15 lakh ghost kitchen fraud and end his career",
+        alibi:
+          "Claims he was conducting quality audits at registered restaurants",
+        evidence:
+          "No audit reports were filed, and he knew about Vikash's peanut allergy from medical records",
+      },
+      {
+        id: 2,
+        name: "Priya Sharma",
+        age: 28,
+        role: "Restaurant Owner & Fraud Participant",
+        details:
+          "Owns 'Spice Junction' restaurant participating in the fake kitchen network. Recently threatened by Vikash with exposure unless she paid him ₹50,000 for silence.",
+        motive:
+          "Vikash was blackmailing her about fake restaurant operations, threatening business closure",
+        alibi:
+          "Says she was managing dinner rush at her restaurant",
+        evidence:
+          "Restaurant staff confirm she was absent for 45 minutes during peak hours",
+      },
+      {
+        id: 3,
+        name: "Arjun Gupta",
+        age: 26,
+        role: "Competing Delivery Executive & Rival",
+        details:
+          "Senior delivery partner whose earnings dropped due to Vikash's popularity with customers. Recently discovered Vikash was earning extra through insider tips about high-value orders.",
+        motive:
+          "Jealous of Vikash's success and wanted to eliminate competition for premium deliveries",
+        alibi:
+          "Claims he was making deliveries in different area of the city",
+        evidence:
+          "GPS data shows he was near Vikash's location during murder time",
+      },
+      {
+        id: 4,
+        name: "Deepika Verma",
+        age: 31,
+        role: "Customer Service Manager & Inside Accomplice",
+        details:
+          "Handles customer complaints and refunds, recently caught by Vikash manipulating delivery charges and keeping refund money. Faces criminal charges for financial fraud.",
+        motive:
+          "Vikash was reporting her embezzlement of customer refunds to management",
+        alibi:
+          "Says she was handling customer complaint calls from office",
+        evidence:
+          "Call logs show no customer interactions during murder time window",
+      },
+      {
+        id: 5,
+        name: "Rohit Malhotra",
+        age: 37,
+        role: "Tech Support Engineer & System Hacker",
+        details:
+          "IT specialist who was helping create fake restaurant profiles in the app system. Recently discovered by Vikash who threatened to expose the technical fraud to cyber crime department.",
+        motive:
+          "Technical fraud exposure would result in arrest and destruction of IT career",
+        alibi:
+          "Claims he was fixing server issues from home office",
+        evidence:
+          "Server logs show no maintenance work was performed during murder time",
+      },
+      {
+        id: 6,
+        name: "Sunita Devi",
+        age: 42,
+        role: "Vikash's Landlady & Financial Disputant",
+        details:
+          "Vikash's house owner who recently discovered he was subletting rooms without permission and keeping rental income. Recently threatened with eviction and legal action by Vikash.",
+        motive:
+          "Vikash was planning to file case against her for illegal rent collection",
+        alibi:
+          "Says she was collecting rent from other tenants in building",
+        evidence:
+          "Other tenants confirm no rent collection happened that evening",
+      },
+      {
+        id: 7,
+        name: "Kiran Das",
+        age: 24,
+        role: "Medical Student & Peanut Allergy Expert",
+        details:
+          "Part-time medical consultant for food delivery platforms, helping create allergy-safe delivery protocols. Recently fired by Vikash's complaint about her slow response to allergy incidents.",
+        motive:
+          "Vikash's complaint destroyed her part-time medical consulting career prospects",
+        alibi:
+          "Claims she was studying for medical exams at library",
+        evidence:
+          "Library records show no entry logged for her that evening",
+      },
+    ],
+    killer: 1,
+    solution:
+      "Rajesh Pandey killed Vikash. As area manager, he had access to Vikash's medical records knowing about the peanut allergy, could create fake orders in the system, and faced exposure of his ₹15 lakh ghost kitchen fraud scheme that would end his career and lead to criminal charges.",
+  },
+
+  {
+    id: 7,
+    title: "The Online Tuition Class Murder",
+    description:
+      "Professor Mahesh Agarwal, owner of 'EduSmart Online Academy', was found dead from electrical shock in his home studio during a live physics class with 200+ students watching. The electrocution was caused by deliberately tampered equipment. The murder happened during peak online class hours when multiple people had access to his home setup.",
+    clues: [
+      "Mahesh was electrocuted by rigged microphone equipment at 4:15 PM during live class",
+      "200+ students witnessed the incident through online video, creating perfect cover",
+      "His computer revealed plans to expose someone's 'question paper leak' operation",
+      "Recent complaints about fake certificates and inflated student success rates",
+      "Home security system was disabled 30 minutes before the class started",
+      "Electrical tampering required professional knowledge of audio equipment"
+    ],
+    suspects: [
+      {
+        id: 1,
+        name: "Anita Sharma",
+        age: 29,
+        role: "Technical Assistant & Equipment Manager",
+        details:
+          "Manages all online teaching equipment and technical setup. Recently caught by Mahesh selling recorded classes to competing platforms and leaking question papers for JEE preparation.",
+        motive:
+          "Mahesh was filing copyright violation case and threatening to expose question paper leaking business",
+        alibi:
+          "Claims she was monitoring class from technical control room",
+        evidence:
+          "Control room was empty during class time, and she has expert knowledge of audio equipment",
+      },
+      {
+        id: 2,
+        name: "Dr. Rajesh Verma",
+        age: 46,
+        role: "Physics Co-teacher & Business Partner",
+        details:
+          "Co-founder of the academy who recently discovered Mahesh was planning to sell the platform to a corporate company without sharing profits. Handles curriculum development and student assessment.",
+        motive:
+          "Mahesh's secret corporate deal would cheat him out of his rightful business share",
+        alibi:
+          "Says he was preparing next lesson in his separate home office",
+        evidence:
+          "No lesson preparation files were created during murder time",
+      },
+      {
+        id: 3,
+        name: "Priyanka Malhotra",
+        age: 24,
+        role: "Student Coordinator & Fake Certificate Creator",
+        details:
+          "Manages student enrollments and creates completion certificates. Recently discovered by Mahesh to be selling fake JEE qualification certificates to students who failed exams.",
+        motive:
+          "Mahesh was reporting her certificate fraud to education board and police",
+        alibi:
+          "Claims she was coordinating with students in online chat during class",
+        evidence:
+          "Chat logs show no coordination messages during murder time window",
+      },
+      {
+        id: 4,
+        name: "Suresh Kumar",
+        age: 38,
+        role: "Electrician & Home Maintenance Worker",
+        details:
+          "Regular electrician who maintains Mahesh's home studio equipment. Recently blackmailed by Mahesh after being caught stealing expensive electronic equipment from the setup.",
+        motive:
+          "Mahesh was filing theft charges, leading to arrest and loss of electrical contractor license",
+        alibi:
+          "Says he was working on electrical repairs in different part of the house",
+        evidence:
+          "No electrical work was scheduled, and he has expert knowledge of equipment tampering",
+      },
+      {
+        id: 5,
+        name: "Kavya Singh",
+        age: 22,
+        role: "Content Creator & Plagiarism Accused",
+        details:
+          "Creates educational content and study materials for the platform. Recently accused by Mahesh of plagiarizing content from international education platforms and selling as original work.",
+        motive:
+          "Mahesh was planning to expose her plagiarism, destroying her educational content career",
+        alibi:
+          "Claims she was creating new study materials in her workspace",
+        evidence:
+          "No new content files were created during the murder time period",
+      },
+      {
+        id: 6,
+        name: "Rohit Agarwal",
+        age: 31,
+        role: "Mahesh's Son & Gambling Addict",
+        details:
+          "Mahesh's son who has been stealing money from business accounts to fund gambling addiction. Recently caught by Mahesh and threatened with police complaint and disinheritance.",
+        motive:
+          "Mahesh was planning to file embezzlement charges and cut him from inheritance",
+        alibi:
+          "Claims he was attending online gambling session during father's class",
+        evidence:
+          "Gambling site logs show no activity during murder time",
+      },
+      {
+        id: 7,
+        name: "Dr. Meera Joshi",
+        age: 34,
+        role: "Educational Consultant & Rival Platform Owner",
+        details:
+          "Owns competing online academy and recently lost major corporate contract to Mahesh's platform. Recently discovered by Mahesh to be poaching his premium students with discounted offers.",
+        motive:
+          "Mahesh was planning legal action for student poaching and corporate interference",
+        alibi:
+          "Says she was conducting her own online class during murder time",
+        evidence:
+          "Her platform shows no scheduled classes during that time slot",
+      },
+    ],
+    killer: 1,
+    solution:
+      "Anita Sharma killed Mahesh. She had expert technical knowledge to tamper with the microphone equipment, was absent from the control room during the live class, and faced criminal charges for question paper leaking and copyright violations that would destroy her career.",
+  },
+
+  {
+    id: 8,
+    title: "The Influencer's Final Post",
+    description:
+      "Riya Malhotra, a popular lifestyle influencer with 2 million followers, was found dead from cyanide poisoning in her home studio while filming a 'healthy morning routine' video. The poison was in her signature green smoothie that she drank live on camera. Multiple people had access to her home studio setup and smoothie preparation area.",
+    clues: [
+      "Riya died from cyanide poisoning at 8:45 AM while recording her morning routine video",
+      "The poison was specifically in her green smoothie - her daily signature drink",
+      "Her phone shows threatening DMs about 'exposing fake brand partnerships' and tax evasion",
+      "Recent investigation revealed she was promoting harmful diet products without disclosure",
+      "Studio's live stream setup captured everything except 15 minutes of 'technical difficulties'",
+      "₹12 lakh in undeclared brand payment cash found hidden in home safe"
+    ],
+    suspects: [
+      {
+        id: 1,
+        name: "Aakash Verma",
+        age: 27,
+        role: "Content Manager & Creative Partner",
+        details:
+          "Manages Riya's content creation and brand partnerships. Recently discovered by Riya selling her personal data and follower information to competing brands for extra income.",
+        motive:
+          "Riya was terminating their partnership and threatening legal action for data theft",
+        alibi:
+          "Claims he was editing previous day's content in his home office",
+        evidence:
+          "No editing activity logged on software during murder time",
+      },
+      {
+        id: 2,
+        name: "Prachi Sharma",
+        age: 25,
+        role: "Personal Assistant & Smoothie Preparer",
+        details:
+          "Handles Riya's daily schedule and prepares her signature smoothies. Recently caught by Riya stealing expensive products sent by brands for reviews and selling them online.",
+        motive:
+          "Riya was filing theft charges and planning to destroy her career in influencer industry",
+        alibi:
+          "Says she was preparing smoothie ingredients in the kitchen",
+        evidence:
+          "She prepared the poisoned smoothie and had opportunity to add cyanide",
+      },
+      {
+        id: 3,
+        name: "Dr. Neha Gupta",
+        age: 35,
+        role: "Nutritionist & Professional Consultant",
+        details:
+          "Provides nutrition advice for Riya's health content. Recently threatened by Riya with medical board complaint for endorsing harmful diet products without proper research.",
+        motive:
+          "Riya's complaint would destroy her medical practice and professional reputation",
+        alibi:
+          "Claims she was conducting online nutrition consultation with other clients",
+        evidence:
+          "Client appointment calendar shows no scheduled consultations during murder time",
+      },
+      {
+        id: 4,
+        name: "Rohit Malhotra",
+        age: 32,
+        role: "Riya's Husband & Financial Manager",
+        details:
+          "Manages Riya's finances and tax planning. Recently discovered by Riya to be hiding income to evade taxes and keeping money in offshore accounts without her knowledge.",
+        motive:
+          "Riya was planning to expose his tax evasion to authorities, leading to criminal charges",
+        alibi:
+          "Says he was handling morning business calls with international brands",
+        evidence:
+          "Phone records show no international calls during murder time window",
+      },
+      {
+        id: 5,
+        name: "Kavya Singh",
+        age: 23,
+        role: "Rival Influencer & Competitor",
+        details:
+          "Competing lifestyle influencer who recently lost major brand deals to Riya. Recently exposed by Riya for buying fake followers and using plagiarized content.",
+        motive:
+          "Riya's exposures destroyed her influencer career and brand partnerships",
+        alibi:
+          "Claims she was creating her own morning routine content at same time",
+        evidence:
+          "Her social media shows no content posted during murder time period",
+      },
+      {
+        id: 6,
+        name: "Suresh Agarwal",
+        age: 41,
+        role: "Brand Manager & Corporate Representative",
+        details:
+          "Represents major health supplement brand that Riya was promoting. Recently discovered by Riya that the supplements contained harmful ingredients not disclosed to consumers.",
+        motive:
+          "Riya was planning to expose supplement dangers, destroying company reputation and causing lawsuits",
+        alibi:
+          "Says he was attending morning corporate meeting via video call",
+        evidence:
+          "Corporate calendar shows no meetings scheduled during that time",
+      },
+      {
+        id: 7,
+        name: "Anita Verma",
+        age: 38,
+        role: "Tax Consultant & Financial Advisor",
+        details:
+          "Handles Riya's tax planning and financial compliance. Recently caught by Riya creating fake expense receipts to reduce tax liability and keeping portion of saved money.",
+        motive:
+          "Riya was reporting her tax fraud to authorities, leading to license cancellation and arrest",
+        alibi:
+          "Claims she was preparing tax documents for other clients",
+        evidence:
+          "No tax preparation work was logged in her system during murder time",
+      },
+      {
+        id: 8,
+        name: "Kiran Das",
+        age: 29,
+        role: "Camera Operator & Technical Crew",
+        details:
+          "Operates cameras and manages live streaming setup. Recently fired by Riya after being caught recording private moments and selling footage to gossip channels.",
+        motive:
+          "Riya was filing privacy violation case and threatening to destroy his career in media industry",
+        alibi:
+          "Claims he was setting up camera equipment for morning shoot",
+        evidence:
+          "Camera setup was already completed before murder time, and he caused the 15-minute 'technical difficulties'",
+      },
+    ],
+    killer: 2,
+    solution:
+      "Prachi Sharma killed Riya. She prepared the signature green smoothie daily, had direct access to add cyanide, faced theft charges that would destroy her career in the influencer industry, and her kitchen preparation alibi gave her perfect opportunity to poison the drink.",
+  },
+
+  {
+    id: 9,
+    title: "The Swiggy Cloud Kitchen Conspiracy",
+    description:
+      "Vikram Reddy, owner of 'Taste Heaven' cloud kitchen in Hyderabad, was found dead from carbon monoxide poisoning in his kitchen's cold storage room. The ventilation system was deliberately blocked and a portable gas stove was left running to create deadly fumes. The murder occurred during lunch prep when the kitchen was busy with multiple orders.",
+    clues: [
+      "Vikram died from carbon monoxide poisoning around 12:30 PM during lunch rush preparation",
+      "Cold storage room's ventilation was blocked with kitchen towels and sealed with tape",
+      "Portable gas stove was left running inside the sealed room to create lethal gas buildup",
+      "His phone revealed he was planning to expose 'fake hygiene certificates' and food safety violations",
+      "Recent health inspector raids found multiple violations that someone was covering up",
+      "₹8 lakh in bribe money was found hidden in spice storage containers",
+      "Kitchen's main CCTV camera was disabled during murder time"
     ],
     suspects: [
       {
         id: 1,
         name: "Rajesh Kumar",
-        age: 35,
-        role: "Senior Developer",
-        details:
-          "Had admin access to all financial systems. Recently facing family pressure for dowry money. Shoe size 9. Security footage shows him leaving at 11:10 PM. Claims he was debugging code in the server room.",
-        motive:
-          "Desperately needed money for sister's wedding and had technical access to project accounts",
-        alibi:
-          "Says he was in the server room fixing a critical bug until 11:10 PM",
-        evidence:
-          "CCTV shows him near Priya's cabin at 10:40 PM, and his access card was used multiple times",
-      },
-      {
-        id: 2,
-        name: "Neha Gupta",
-        age: 28,
-        role: "Team Lead",
-        details:
-          "Priya's junior who was recently denied a promotion to senior manager. Wears bright red sindoor daily. Shoe size 6. Her access card shows exit at 10:15 PM according to security logs.",
-        motive:
-          "Angry about being overlooked for promotion that went to an external candidate instead",
-        alibi:
-          "Claims she left office at 10:15 PM and took auto-rickshaw home to Noida",
-        evidence:
-          "Her keycard shows exit at 10:15 PM, but the back gate has faulty camera that night",
-      },
-      {
-        id: 3,
-        name: "Vikram Singh",
-        age: 48,
-        role: "Finance Head",
-        details:
-          "Priya's reporting manager and project budget controller. Under internal audit for fund misappropriation. Shoe size 9. Security shows him leaving at 11:20 PM. Known for heated arguments with Priya over budget approvals.",
-        motive:
-          "Priya discovered his systematic fund diversion and was planning to report to MD",
-        alibi:
-          "Claims he was in his office preparing audit documents until 11:20 PM",
-        evidence:
-          "Priya's notes mention 'V.S. - suspicious transfers' with today's date and time",
-      },
-    ],
-    killer: 3,
-    solution:
-      "Vikram Singh killed Priya because she uncovered his fund embezzlement scheme. The evidence clearly points to him: his shoe size matches the muddy prints, Priya's notes directly implicated him (V.S.), and he had the strongest motive to silence her before she could expose his financial fraud to the management.",
-  },
-  {
-    id: 2,
-    title: "The Wedding Poison Case",
-    description:
-      "Arjun Agarwal, a wealthy textile businessman from Jaipur, was found dead in his haveli's prayer room during his nephew's pre-wedding ceremony. He had been poisoned with potassium cyanide mixed into his special kesari halwa. Three family members had access to the sweet preparation area throughout the evening.",
-    clues: [
-      "Arjun died from cyanide poisoning between 8:30-9:00 PM during aarti time",
-      "The poison was specifically in the kesari halwa bowl that Arjun always ate first as prasad",
-      "A small chemical vial was found hidden behind the Ganesha murti in the prayer room",
-      "Arjun recently changed his will, leaving the entire textile business to a trust instead of family",
-      "Only three people knew about his habit of eating kesari halwa first during evening prayers",
-    ],
-    suspects: [
-      {
-        id: 1,
-        name: "Kavya Agarwal",
-        age: 32,
-        role: "Estranged Daughter-in-law",
-        details:
-          "Arjun's son's widow who he recently cut from the business inheritance. She has a B.Sc in Chemistry and works at a pharmaceutical company. Arrived late to the ceremony at 8:10 PM claiming traffic from Delhi.",
-        motive:
-          "Cut out of textile business worth ₹50 crore inheritance in favor of charitable trust",
-        alibi:
-          "Claims she was in the women's section attending mehendi ceremony until 9:15 PM",
-        evidence:
-          "Her purse contained lab equipment and multiple people saw her near the kitchen around 8:40 PM",
-      },
-      {
-        id: 2,
-        name: "Dr. Mahesh Sharma",
-        age: 58,
-        role: "Family Doctor & Friend",
-        details:
-          "Arjun's childhood friend and personal physician for 20 years. Recently lost his clinic due to a medical negligence case. Has access to various chemicals through medical practice.",
-        motive:
-          "Desperately needed money after losing his clinic and facing multiple lawsuits",
-        alibi:
-          "Says he was in the bathroom when Arjun went for evening prayers",
-        evidence:
-          "Had borrowed ₹25 lakh from Arjun last year and was being pressured for repayment",
-      },
-      {
-        id: 3,
-        name: "Kamala Devi",
-        age: 52,
-        role: "Head Cook & Caretaker",
-        details:
-          "Arjun's trusted head cook and house manager for 18 years. Recently discovered she was removed from the will despite promises. She personally prepared all sweets including the kesari halwa and arranged the prayer room.",
-        motive:
-          "Arjun had promised her ₹10 lakh and a house but removed her from will last month",
-        alibi: "Claims she was serving dinner to guests when Arjun died",
-        evidence:
-          "She had complete access to the kitchen and prayer room, and prepared the exact bowl of halwa",
-      },
-    ],
-    killer: 3,
-    solution:
-      "Kamala Devi killed Arjun. As the head cook, she had perfect access to poison the kesari halwa, she knew his prayer routine intimately, and she was betrayed after 18 years of loyal service when Arjun broke his promise and removed her from his will despite her years of dedicated service to the family.",
-  },
-  {
-    id: 3,
-    title: "The Film Studio Stabbing",
-    description:
-      "Rohit Kapoor, a famous Bollywood director, was found stabbed in his vanity van at Film City, Mumbai during the shooting of his latest blockbuster. The murder weapon was a prop knife from the film set. Three people were on set during the lunch break when the murder occurred.",
-    clues: [
-      "Rohit was killed between 1:30-2:00 PM with a prop knife during lunch break",
-      "The van door was locked from inside, and the air conditioning was turned to maximum",
-      "His phone shows threatening messages about exposing someone's 'secret affair'",
-      "A bottle of expensive whiskey was found half-empty in the van - unusual for Rohit who was teetotaler",
-      "Someone had tampered with the van's security camera, covering it with makeup powder",
-    ],
-    suspects: [
-      {
-        id: 1,
-        name: "Sonia Malhotra",
-        age: 29,
-        role: "Lead Actress",
-        details:
-          "The film's heroine and Rohit's rumored girlfriend. Recently discovered Rohit was planning to replace her with a younger actress. Has access to all prop weapons and makeup supplies.",
-        motive:
-          "Facing career destruction and public humiliation due to replacement and affair exposure",
-        alibi:
-          "Claims she was in her makeup room getting touch-ups for afternoon shot",
-        evidence:
-          "Makeup powder found on camera matches her personal kit, and prop master confirms missing knife",
-      },
-      {
-        id: 2,
-        name: "Karan Mehra",
         age: 34,
-        role: "Producer & Financier",
+        role: "Head Chef & Kitchen Manager",
         details:
-          "Film's producer who invested ₹80 crore in the project. Recently discovered Rohit was planning to sell the film rights to another studio. Known to carry expensive whiskey as gifts.",
+          "Manages daily kitchen operations and food preparation. Recently caught by Vikram reusing expired ingredients and serving contaminated food to cut costs and increase profits.",
         motive:
-          "Rohit's betrayal would cause massive financial loss and ruin his production house",
+          "Vikram was reporting him to food safety board for health violations, ending his culinary career",
         alibi:
-          "Says he was on phone with distributors in his office during lunch time",
+          "Claims he was supervising lunch preparation in main kitchen area",
         evidence:
-          "The whiskey bottle is his preferred brand, and he had keys to Rohit's van",
-      },
-      {
-        id: 3,
-        name: "Madhav Joshi",
-        age: 45,
-        role: "Assistant Director",
-        details:
-          "Rohit's longtime associate and assistant director for 12 films. Recently learned Rohit was planning to expose his gambling debts to financiers. Has intimate knowledge of film sets and security systems.",
-        motive:
-          "Rohit threatened to expose his ₹50 lakh gambling debts, destroying his career",
-        alibi:
-          "Claims he was coordinating with technical crew for afternoon shoot setup",
-        evidence:
-          "He knew exactly how to disable the security camera and had access during setup",
-      },
-    ],
-    killer: 1,
-    solution:
-      "Sonia Malhotra killed Rohit. The evidence points to her: the makeup powder covering the camera came from her kit, she had access to prop weapons, and she faced both career destruction and public humiliation from Rohit's plans to replace her and expose their affair.",
-  },
-  {
-    id: 4,
-    title: "The Hospital Drug Murder",
-    description:
-      "Dr. Sandeep Nair, Chief Medical Officer at Apollo Hospital, Chennai, was found dead in his office from insulin overdose. He was diabetic but the dosage was lethal. Three medical staff had access to his office and insulin supplies that evening.",
-    clues: [
-      "Dr. Nair died from massive insulin overdose between 9:00-10:00 PM",
-      "His insulin pen was replaced with a concentrated veterinary grade insulin",
-      "Security footage shows his office lights going off at 9:45 PM - unusual timing",
-      "A medical file about 'organ trafficking investigation' was found hidden in his desk",
-      "The insulin vial found in trash had fingerprints wiped clean but residue DNA remained",
-    ],
-    suspects: [
-      {
-        id: 1,
-        name: "Dr. Meera Reddy",
-        age: 36,
-        role: "Senior Surgeon",
-        details:
-          "Cardiac surgeon and Dr. Nair's former protégé. Recently demoted after Dr. Nair discovered her involvement in private organ trading. Has access to all medical supplies including veterinary drugs.",
-        motive:
-          "Dr. Nair was about to expose her illegal organ trafficking to medical board",
-        alibi: "Claims she was performing emergency surgery until 10:30 PM",
-        evidence:
-          "Surgery records show operation ended at 9:30 PM, and she had access to veterinary insulin",
+          "Kitchen staff confirm he was missing for 20 minutes during critical lunch prep time",
       },
       {
         id: 2,
-        name: "Ravi Pillai",
-        age: 41,
-        role: "Head Pharmacist",
+        name: "Sunita Rao",
+        age: 29,
+        role: "Food Safety Inspector & Corrupt Official",
         details:
-          "Hospital's chief pharmacist for 8 years. Controls all drug inventory including insulin. Recently caught selling expired medicines to private clinics by Dr. Nair.",
+          "Government food inspector who was taking bribes from Vikram to overlook hygiene violations. Recently threatened by Vikram with exposure unless she stopped demanding increased bribe money.",
         motive:
-          "Dr. Nair threatened to file criminal charges for drug theft and black market sales",
-        alibi: "Says he was doing inventory check in pharmacy until 10:15 PM",
+          "Vikram's exposure would end her government career and lead to criminal charges for corruption",
+        alibi:
+          "Says she was conducting inspection at different cloud kitchen across the city",
         evidence:
-          "Has master access to all insulin supplies and could easily obtain veterinary grade drugs",
+          "No inspection reports were filed for other locations during murder time",
       },
       {
         id: 3,
-        name: "Nurse Priya Das",
-        age: 28,
-        role: "ICU Head Nurse",
+        name: "Arjun Gupta",
+        age: 26,
+        role: "Delivery Coordinator & Inside Accomplice",
         details:
-          "Senior ICU nurse who managed Dr. Nair's diabetes care. Recently discovered by Dr. Nair to be stealing patient medications. Has intimate knowledge of insulin administration.",
+          "Coordinates with delivery platforms and manages order logistics. Recently discovered by Vikram to be manipulating delivery charges and keeping extra money from fake orders.",
         motive:
-          "Dr. Nair was planning to terminate her and file police complaint for drug theft",
-        alibi: "Claims she was attending to ICU patients during evening shift",
-        evidence:
-          "ICU records show she left her station for 45 minutes around 9:30 PM",
-      },
-    ],
-    killer: 1,
-    solution:
-      "Dr. Meera Reddy killed Dr. Nair. As a surgeon, she had access to veterinary grade insulin through her network, she was the primary target of his organ trafficking investigation, and surgery records prove she was free during the murder time window, contradicting her alibi.",
-  },
-  {
-    id: 5,
-    title: "The Temple Festival Drowning",
-    description:
-      "Pandit Ramesh Shastri, head priest of Jagannath Temple, Puri, was found drowned in the temple's sacred pond during Rath Yatra festival. Despite being an excellent swimmer, he mysteriously drowned in shallow water. Three temple committee members were present during the incident.",
-    clues: [
-      "Pandit Shastri drowned in 4-feet deep water despite being a strong swimmer",
-      "Autopsy revealed sedative drugs in his bloodstream - unusual for a religious priest",
-      "His sacred thread (janeu) was found torn and floating separately from his body",
-      "Temple donation records show ₹25 lakh missing from festival collection funds",
-      "Witnesses heard an argument near the pond around 8:00 PM but couldn't identify voices",
-    ],
-    suspects: [
-      {
-        id: 1,
-        name: "Govind Mishra",
-        age: 54,
-        role: "Temple Committee Chairman",
-        details:
-          "Temple's managing committee head for 6 years. Controls all financial decisions and donations. Recently confronted by Pandit Shastri about missing festival funds. Has keys to donation vault.",
-        motive:
-          "Pandit Shastri discovered his systematic embezzlement of temple donations over years",
+          "Vikram was filing fraud charges for delivery manipulation, leading to arrest",
         alibi:
-          "Claims he was supervising evening aarti preparations in main temple hall",
+          "Claims he was coordinating with Swiggy delivery partners outside kitchen",
         evidence:
-          "Temple accounts show irregular withdrawals matching his personal bank deposits",
+          "Delivery partners confirm no coordination meeting happened during lunch rush",
       },
       {
-        id: 2,
-        name: "Satish Panda",
-        age: 43,
-        role: "Junior Priest",
+        id: 4,
+        name: "Dr. Meera Sharma",
+        age: 37,
+        role: "Hygiene Consultant & Certificate Forger",
         details:
-          "Assistant priest waiting for promotion to head priest position for 8 years. Recently passed over again in favor of continuing Pandit Shastri's tenure. Has access to temple medicinal herbs and sedatives.",
+          "Provides hygiene consulting and creates food safety certificates. Recently caught by Vikram selling fake FSSAI certificates to multiple cloud kitchens without proper inspections.",
         motive:
-          "Frustrated by repeated rejection for head priest position despite years of service",
+          "Vikram was exposing her fake certificate business to authorities, destroying her consulting career",
         alibi:
-          "Says he was preparing prasad in temple kitchen during evening hours",
+          "Says she was consulting with other cloud kitchen owners about compliance",
         evidence:
-          "Kitchen staff confirm he left for 'personal work' from 7:45-8:30 PM",
+          "No consultation appointments were scheduled during murder time window",
       },
       {
-        id: 3,
-        name: "Bimal Rath",
-        age: 39,
-        role: "Festival Coordinator",
-        details:
-          "Organizes all temple festivals and manages vendor contracts. Recently accused by Pandit Shastri of taking bribes from vendors. Has access to various festival supplies including cleaning chemicals.",
-        motive:
-          "Pandit Shastri threatened to expose his vendor bribery scandal to devotee community",
-        alibi:
-          "Claims he was coordinating with security for crowd control near main gate",
-        evidence:
-          "Security footage shows him near pond area at 8:10 PM, contrary to his alibi",
-      },
-    ],
-    killer: 3,
-    solution:
-      "Bimal Rath killed Pandit Shastri. Security footage places him near the pond during the murder time, he had access to sedatives through festival supplies, and he faced public disgrace and criminal charges if his vendor bribery scandal was exposed by the priest.",
-  },
-  {
-    id: 6,
-    title: "The Cricket Academy Poisoning",
-    description:
-      "Coach Suresh Tendulkar, former Ranji player and cricket academy owner in Pune, was found dead in his office from aconitine poisoning after the evening practice session. The poison was mixed in his daily protein shake. Three academy staff had access to his office and nutrition supplies.",
-    clues: [
-      "Coach Tendulkar died from aconitine (wolfsbane) poisoning between 7:30-8:00 PM",
-      "The poison was mixed in his post-workout protein shake kept in office refrigerator",
-      "His laptop showed threatening emails about 'exposing match-fixing in youth cricket'",
-      "Academy's scholarship fund account shows ₹12 lakh unauthorized withdrawals",
-      "A small vial containing wolfsbane extract was found in the parking lot trash bin",
-    ],
-    suspects: [
-      {
-        id: 1,
-        name: "Ajay Patil",
+        id: 5,
+        name: "Priya Reddy",
         age: 31,
-        role: "Assistant Coach",
+        role: "Vikram's Wife & Business Co-owner",
         details:
-          "Former Mumbai Ranji player who assists with batting coaching. Recently discovered selling academy selection spots to wealthy parents for ₹5 lakh each. Has botany degree and knowledge of poisonous plants.",
+          "Co-manages business finances and supplier relationships. Recently discovered Vikram was planning to sell cloud kitchen to corporate chain and start fresh business without her involvement.",
         motive:
-          "Coach Tendulkar was about to expose his selection spot selling scam to cricket board",
+          "Vikram's secret sale would leave her with nothing after years of building the business together",
         alibi:
-          "Claims he was conducting fielding practice with junior batch until 8:15 PM",
+          "Claims she was negotiating with ingredient suppliers via phone calls",
         evidence:
-          "His botany background gives him access to wolfsbane, and bank records show suspicious deposits",
+          "Phone records show no supplier calls during murder time period",
       },
       {
-        id: 2,
-        name: "Prashant Kulkarni",
-        age: 46,
-        role: "Academy Manager",
+        id: 6,
+        name: "Kiran Verma",
+        age: 33,
+        role: "Competitor & Rival Kitchen Owner",
         details:
-          "Handles all academy finances and student admissions. Recently caught by Coach Tendulkar misappropriating scholarship funds meant for underprivileged students. Has access to all office areas.",
+          "Owns competing cloud kitchen 'Royal Feast' in same area. Recently threatened by Vikram with business sabotage exposure after discovering he was paying delivery executives to delay Taste Heaven orders.",
         motive:
-          "Coach threatened to file police complaint for scholarship fund embezzlement",
+          "Vikram's evidence would destroy his business reputation and face legal action for sabotage",
         alibi:
-          "Says he was in accounts office preparing fee collection reports until 8:30 PM",
+          "Says he was managing lunch rush at his own kitchen facility",
         evidence:
-          "Has master keys to all areas including coach's office and refrigerator",
+          "His kitchen staff confirm he was absent during their busiest lunch hour",
       },
       {
-        id: 3,
-        name: "Deepak Sharma",
-        age: 27,
-        role: "Fitness Trainer",
+        id: 7,
+        name: "Rohit Malhotra",
+        age: 28,
+        role: "Kitchen Maintenance & Gas System Expert",
         details:
-          "Academy's fitness and nutrition expert. Prepares all protein shakes and supplements for players and staff. Recently accused by Coach Tendulkar of providing performance-enhancing drugs to players.",
+          "Handles kitchen equipment maintenance and gas safety systems. Recently caught by Vikram stealing expensive kitchen equipment and selling to other cloud kitchens.",
         motive:
-          "Coach was planning to report his illegal drug supply to anti-doping authorities",
-        alibi: "Claims he was cleaning equipment in gymnasium until 8:00 PM",
+          "Vikram was filing theft charges and threatening to destroy his maintenance contractor business",
+        alibi:
+          "Claims he was checking gas safety systems in different section of kitchen",
         evidence:
-          "He prepared the coach's daily protein shake and has access to various supplements",
+          "Gas safety logs show no maintenance checks were performed during murder time",
+      },
+      {
+        id: 8,
+        name: "Anita Singh",
+        age: 24,
+        role: "Social Media Manager & Review Manipulator",
+        details:
+          "Manages online reviews and social media presence for cloud kitchen. Recently caught by Vikram paying for fake positive reviews and bribing customers to remove negative feedback.",
+        motive:
+          "Vikram was exposing her review manipulation to platforms, destroying her digital marketing career",
+        alibi:
+          "Claims she was responding to customer reviews and managing social media from office area",
+        evidence:
+          "No social media activity or review responses posted during murder time window",
       },
     ],
     killer: 2,
     solution:
-      "Prashant Kulkarni killed Coach Tendulkar. He had master access to the coach's office and refrigerator, faced criminal charges for embezzling scholarship funds, and the ₹12 lakh missing from academy accounts directly pointed to his financial fraud that the coach was about to expose.",
-  },
-  {
-    id: 7,
-    title: "The Tea Estate Murder",
-    description:
-      "Mr. Jagmohan Singh, owner of Green Valley Tea Estate in Darjeeling, was found dead in his bungalow study from cyanide poisoning. The poison was in his evening tea - ironic for a tea estate owner. Three estate managers were present during his daily evening tea routine.",
-    clues: [
-      "Mr. Singh died from cyanide poisoning in his special Earl Grey tea at 6:30 PM",
-      "Only his teacup contained poison - the teapot and other cups were clean",
-      "Estate records show he was planning to sell the property to a corporate buyer",
-      "A suicide note was found but handwriting experts deemed it forged",
-      "His safe was found open with important property documents missing",
-    ],
-    suspects: [
-      {
-        id: 1,
-        name: "Raman Pradhan",
-        age: 49,
-        role: "Estate Manager",
-        details:
-          "Has managed the tea estate for 15 years and lives on the property with his family. Recently learned that Mr. Singh was selling to a corporation that would terminate all local staff. Has been forging signatures for daily operations.",
-        motive:
-          "Sale to corporation would destroy his livelihood and displace his family from estate housing",
-        alibi:
-          "Claims he was supervising evening tea plucking in the upper gardens",
-        evidence:
-          "Workers confirm he was absent from gardens between 6:00-6:45 PM, and he has signature forgery skills",
-      },
-      {
-        id: 2,
-        name: "Dr. Anita Ghosh",
-        age: 38,
-        role: "Quality Control Manager",
-        details:
-          "Tea tasting expert and quality controller for the estate. Recently discovered Mr. Singh was planning to blame poor quality reports on her to justify selling. Has chemistry background and access to lab chemicals.",
-        motive:
-          "Mr. Singh was planning to destroy her reputation in the tea industry as scapegoat",
-        alibi: "Says she was testing evening batch samples in the quality lab",
-        evidence:
-          "Lab records show no samples were tested during murder time, and she has access to cyanide compounds",
-      },
-      {
-        id: 3,
-        name: "Kailash Rai",
-        age: 52,
-        role: "Head Accountant",
-        details:
-          "Estate's financial manager for 12 years. Recently discovered by Mr. Singh to be embezzling funds through fake worker payroll entries. Handles all estate documentation and has access to Mr. Singh's study.",
-        motive:
-          "Mr. Singh was about to file criminal charges for embezzlement before the sale",
-        alibi:
-          "Claims he was preparing financial documents for the potential buyers",
-        evidence:
-          "Had access to study and safe, could forge suicide note, and faced immediate arrest",
-      },
-    ],
-    killer: 3,
-    solution:
-      "Kailash Rai killed Mr. Singh. He had access to the study and safe, could forge the suicide note with his document handling skills, stole property papers to cover his embezzlement, and faced immediate criminal prosecution that would destroy his life and family.",
-  },
-  {
-    id: 8,
-    title: "The University Professor Murder",
-    description:
-      "Dr. Meera Krishnan, Head of Chemistry Department at Delhi University, was found dead in her laboratory from hydrogen sulfide gas poisoning. The lab's ventilation system had been tampered with. Three faculty members had access to the chemistry lab after hours.",
-    clues: [
-      "Dr. Krishnan died from hydrogen sulfide poisoning around 9:30 PM in her private lab",
-      "The lab's safety ventilation system was deliberately disabled from the main control panel",
-      "Her research files on 'academic plagiarism investigation' were found scattered and torn",
-      "Security card logs show three people accessed the chemistry building after 9:00 PM",
-      "A fake gas leak emergency was reported to delay security response by 20 minutes",
-    ],
-    suspects: [
-      {
-        id: 1,
-        name: "Prof. Rajesh Verma",
-        age: 44,
-        role: "Associate Professor",
-        details:
-          "Senior chemistry professor competing for department head position. Recently accused by Dr. Krishnan of plagiarizing research papers from international journals. Has expertise in gas chemistry and safety systems.",
-        motive:
-          "Dr. Krishnan was about to present plagiarism evidence to university committee, ending his career",
-        alibi: "Claims he was grading papers in his office until 10:00 PM",
-        evidence:
-          "His office was empty when security checked, and he has detailed knowledge of ventilation systems",
-      },
-      {
-        id: 2,
-        name: "Dr. Sunita Agarwal",
-        age: 36,
-        role: "Assistant Professor",
-        details:
-          "Junior faculty member whose PhD thesis was recently questioned by Dr. Krishnan for data fabrication. Facing potential PhD revocation and career termination. Has access to all lab equipment and safety controls.",
-        motive:
-          "Dr. Krishnan's investigation would revoke her PhD and destroy her academic career",
-        alibi:
-          "Says she was conducting late evening experiments in organic chemistry lab",
-        evidence:
-          "Organic lab shows no signs of recent use, and she knew how to disable safety systems",
-      },
-      {
-        id: 3,
-        name: "Arun Kumar",
-        age: 29,
-        role: "Lab Technician",
-        details:
-          "Senior lab technician responsible for chemical storage and safety systems. Recently caught by Dr. Krishnan stealing expensive laboratory chemicals to sell to private coaching centers. Has master access to all controls.",
-        motive:
-          "Dr. Krishnan was filing police complaint for chemical theft, facing immediate termination and arrest",
-        alibi: "Claims he was doing inventory check in chemical storage room",
-        evidence:
-          "Storage records show no inventory was done, and he has access to gas cylinders and ventilation controls",
-      },
-    ],
-    killer: 3,
-    solution:
-      "Arun Kumar killed Dr. Krishnan. As lab technician, he had master access to safety systems and gas supplies, faced immediate criminal charges for chemical theft, and could easily disable ventilation while creating the fake emergency call to delay rescue response.",
-  },
-  // Additional 22 cases to concatenate with existing gameScenarios array
-
-  {
-    id: 9,
-    title: "The Jewelry Store Heist Murder",
-    description:
-      "Mohan Jewelers owner Ravi Mohan was found shot dead in his jewelry store vault during Diwali shopping season. The murder occurred during a staged robbery, but no jewelry was actually stolen. Three people had access to the store that evening.",
-    clues: [
-      "Ravi was shot execution-style with his own licensed revolver kept in the store",
-      "The vault was opened with correct combination - no signs of forced entry",
-      "₹8 lakh cash was left untouched while fake jewelry worth ₹2 lakh was scattered around",
-      "Store's CCTV was professionally disabled 10 minutes before the murder",
-      "Insurance claim forms for ₹50 lakh were found pre-filled and dated for next day",
-    ],
-    suspects: [
-      {
-        id: 1,
-        name: "Suresh Mohan",
-        age: 38,
-        role: "Younger Brother & Partner",
-        details:
-          "Co-owner of the jewelry business with mounting gambling debts. Recently discovered that Ravi was planning to buy out his share. Has access to vault combination and store weapons.",
-        motive:
-          "Desperately needed insurance money for gambling debts and faced buyout by his brother",
-        alibi:
-          "Claims he was at card game in friend's house during murder time",
-        evidence:
-          "Gambling friends confirm he left the game for 2 hours during murder window",
-      },
-      {
-        id: 2,
-        name: "Deepika Mohan",
-        age: 35,
-        role: "Store Manager & Ravi's Wife",
-        details:
-          "Manages daily operations and has full access to store systems. Recently discovered Ravi's affair with assistant. Knows all security protocols and insurance procedures.",
-        motive:
-          "Ravi was planning to divorce her for his assistant and leave her with nothing",
-        alibi: "Says she was at her mother's house for Diwali preparations",
-        evidence:
-          "Mother confirms she left early claiming 'emergency at store' around murder time",
-      },
-      {
-        id: 3,
-        name: "Vikram Shetty",
-        age: 42,
-        role: "Security Consultant",
-        details:
-          "Former police officer who installed and maintains store security systems. Recently terminated by Ravi after being caught selling security schedules to local thieves.",
-        motive:
-          "Revenge against Ravi for destroying his security business reputation",
-        alibi: "Claims he was drinking alone at home after losing his contract",
-        evidence:
-          "Has detailed knowledge of security systems and was seen near the store at 8 PM",
-      },
-    ],
-    killer: 1,
-    solution:
-      "Suresh Mohan killed his brother Ravi. He had access to the vault combination, knew about the weapon, left his alibi for 2 hours during the murder, and desperately needed the insurance money to pay his gambling debts while preventing his buyout.",
+      "Sunita Rao killed Vikram. As a food safety inspector, she knew about ventilation systems and gas safety protocols, could manipulate safety equipment, faced criminal corruption charges that would end her government career, and her inspection alibi was false as no reports were filed.",
   },
 
   {
     id: 10,
-    title: "The Beauty Parlor Acid Attack",
+    title: "The Co-working Space Startup Murder",
     description:
-      "Sunita Kapoor, owner of 'Glamour Beauty Parlor' in Chandigarh, was found dead from sulfuric acid burns in her treatment room. The acid was thrown while she was giving a facial treatment to a client. Three staff members were present during the evening shift.",
+      "Arjun Kapoor, founder of 'WorkHub' co-working space in Bangalore, was found dead from electric shock in the building's server room during a late-night investor meeting preparation. The electrical panel was rigged to electrocute anyone who touched the main switch. Multiple startup founders and employees were working late in the building.",
     clues: [
-      "Sunita died from severe acid burns between 7:00-7:30 PM during peak hours",
-      "The acid was industrial grade sulfuric acid, not cosmetic grade",
-      "Her appointment book shows a 'VIP client' booking that doesn't exist in records",
-      "Recent harassment complaints were filed against a former employee",
-      "The parlor's chemical storage room was found with broken lock",
+      "Arjun died from electrocution around 11:15 PM while checking server issues before investor presentation",
+      "Main electrical panel was professionally rigged with live wires to create lethal trap",
+      "His laptop revealed evidence of 'investment fraud' and fake startup valuations",
+      "Recent discovery of ₹25 lakh missing from co-working space member deposits",
+      "Server room access logs show 5 people entered that evening using different keycards",
+      "Building's backup power system was manually disabled from basement control room",
+      "Security cameras were hacked and showed loop footage during murder time"
     ],
     suspects: [
       {
         id: 1,
-        name: "Pooja Sharma",
-        age: 26,
-        role: "Senior Beautician",
+        name: "Priya Sharma",
+        age: 32,
+        role: "Tech Startup Founder & Server Expert",
         details:
-          "Lead beautician recently fired by Sunita for stealing expensive cosmetics. Has chemistry background and knows all chemical storage locations. Recently threatened Sunita publicly.",
+          "Runs AI startup from the co-working space and has technical knowledge of electrical systems. Recently discovered by Arjun to be using WorkHub's servers for cryptocurrency mining without permission.",
         motive:
-          "Fired for theft and blacklisted from other parlors, destroying her career prospects",
-        alibi: "Claims she was at home applying for jobs online",
+          "Arjun was terminating her membership and filing charges for unauthorized server usage",
+        alibi:
+          "Claims she was coding late night project in her dedicated workspace",
         evidence:
-          "Neighbors confirm she left house at 6:30 PM, and she has chemistry knowledge for acid handling",
+          "Code repository shows no commits during murder time, and she has electrical engineering background",
       },
       {
         id: 2,
-        name: "Neelam Devi",
-        age: 34,
-        role: "Facial Specialist",
+        name: "Rohit Verma",
+        age: 35,
+        role: "Facilities Manager & Electrical Supervisor",
         details:
-          "Experienced facial treatment expert who discovered Sunita was planning to replace her with a younger, cheaper beautician. Has access to all treatment rooms and chemical supplies.",
+          "Manages building infrastructure and electrical systems. Recently caught by Arjun embezzling maintenance funds and overcharging for electrical repair work.",
         motive:
-          "About to lose job and clientele to younger replacement after 8 years of service",
-        alibi: "Says she was preparing treatment room for next client",
+          "Arjun was filing embezzlement charges and threatening to destroy his facilities management career",
+        alibi:
+          "Says he was conducting routine electrical maintenance in different floors",
         evidence:
-          "No next client was scheduled, and she was alone in chemical storage area at 6:45 PM",
+          "Maintenance logs show no scheduled work, and he has expert knowledge of electrical panel rigging",
       },
       {
         id: 3,
-        name: "Rakesh Kumar",
-        age: 41,
-        role: "Maintenance & Cleaner",
+        name: "Dr. Anjali Gupta",
+        age: 28,
+        role: "FinTech Startup Founder & Investment Fraudster",
         details:
-          "Handles cleaning and maintenance of parlor equipment. Recently caught by Sunita taking photos of female clients during treatments. Faces criminal charges and job termination.",
+          "Runs financial technology startup and recently discovered by Arjun to be running fake investment schemes using WorkHub's prestigious address to fool investors.",
         motive:
-          "Sunita was filing police complaint for voyeurism, leading to arrest and social disgrace",
+          "Arjun was exposing her investment fraud to authorities, leading to arrest and startup closure",
         alibi:
-          "Claims he was cleaning the reception area during treatment time",
+          "Claims she was preparing pitch deck for next day's investor meeting",
         evidence:
-          "Reception was already clean, and he had master keys to chemical storage",
+          "No presentation files were created during murder time period",
+      },
+      {
+        id: 4,
+        name: "Kiran Kumar",
+        age: 29,
+        role: "IT Support Manager & System Hacker",
+        details:
+          "Manages IT infrastructure and has access to all building systems. Recently caught by Arjun selling member data and confidential startup information to competing companies.",
+        motive:
+          "Arjun was filing cyber crime case for data theft, destroying his IT career",
+        alibi:
+          "Claims he was fixing network issues reported by multiple startups",
+        evidence:
+          "Network logs show no reported issues, and he could hack security cameras to create loop footage",
+      },
+      {
+        id: 5,
+        name: "Sunita Malhotra",
+        age: 33,
+        role: "Business Consultant & Member Deposit Thief",
+        details:
+          "Provides business consulting to startups and handles member onboarding. Recently discovered by Arjun to be stealing security deposits from new members and creating fake receipt records.",
+        motive:
+          "Arjun was exposing her theft of ₹25 lakh in member deposits, leading to criminal charges",
+        alibi:
+          "Says she was consulting with late-working startup founders about business strategy",
+        evidence:
+          "No consultation sessions were logged in her appointment system",
+      },
+      {
+        id: 6,
+        name: "Vikash Singh",
+        age: 27,
+        role: "Food Delivery Startup Founder & Competitor",
+        details:
+          "Runs food delivery startup and recently lost major investor funding when Arjun exposed his fake user growth numbers and inflated revenue reports.",
+        motive:
+          "Arjun's exposure destroyed his startup funding and reputation in investor community",
+        alibi:
+          "Claims he was analyzing competitor data and preparing growth strategy",
+        evidence:
+          "No analysis files were created, and his computer was not used during murder time",
+      },
+      {
+        id: 7,
+        name: "Kavya Reddy",
+        age: 26,
+        role: "EdTech Startup Founder & Intellectual Property Thief",
+        details:
+          "Runs educational technology startup and recently caught by Arjun stealing code and business ideas from other startups in the co-working space.",
+        motive:
+          "Arjun was filing intellectual property theft case, destroying her startup and career",
+        alibi:
+          "Claims she was developing new features for her education platform",
+        evidence:
+          "Development environment shows no coding activity during murder time window",
+      },
+      {
+        id: 8,
+        name: "Rajesh Agarwal",
+        age: 38,
+        role: "Venture Capitalist & Fraudulent Investor",
+        details:
+          "Represents investment firm and recently discovered by Arjun to be running fake due diligence reports and stealing startup intellectual property for his own ventures.",
+        motive:
+          "Arjun was exposing his investment fraud to other VCs and startup community",
+        alibi:
+          "Says he was reviewing investment portfolios and startup evaluations",
+        evidence:
+          "No portfolio reviews were documented during murder time",
+      },
+      {
+        id: 9,
+        name: "Deepika Joshi",
+        age: 30,
+        role: "Accountant & Financial Fraudster",
+        details:
+          "Handles accounting for multiple startups in WorkHub and recently caught by Arjun manipulating financial records to help startups show fake profitability to investors.",
+        motive:
+          "Arjun was reporting her financial fraud to chartered accountancy board, ending her career",
+        alibi:
+          "Claims she was preparing financial statements for multiple startup clients",
+        evidence:
+          "No financial documents were created during murder time period",
       },
     ],
-    killer: 3,
+    killer: 2,
     solution:
-      "Rakesh Kumar killed Sunita. He faced criminal charges for voyeurism, had access to industrial chemicals through maintenance work, and created the fake VIP appointment to ensure Sunita would be alone and vulnerable during the attack.",
+      "Rohit Verma killed Arjun. As facilities manager, he had expert knowledge to rig the electrical panel, could disable backup power systems, faced embezzlement charges that would destroy his career, and his maintenance alibi was false as no work was scheduled.",
   },
 
   {
     id: 11,
-    title: "The Textile Mill Owner Murder",
+    title: "The IPL Fantasy League Murder",
     description:
-      "Ramesh Agarwal, owner of Agarwal Textiles in Coimbatore, was found electrocuted in his office during night shift operations. The electrical panel had been tampered with to create a lethal trap. Three factory supervisors were working the night shift.",
+      "Sachin Malhotra, admin of India's largest IPL fantasy cricket league with 50,000+ members, was found dead from insulin overdose in his gaming setup room during live match commentary. He was diabetic, but someone replaced his insulin with a concentrated lethal dose during the high-stakes playoff match streaming session when lakhs of rupees were at stake.",
     clues: [
-      "Ramesh was electrocuted by a rigged electrical switch in his office around 11 PM",
-      "The electrical panel was professionally modified to bypass safety circuits",
-      "Factory union strike notices were found hidden in his desk drawer",
-      "Recent worker safety complaints were filed against the factory with labor department",
-      "His life insurance policy was recently increased to ₹2 crore",
+      "Sachin died from insulin overdose at 9:30 PM during CSK vs MI playoff match commentary",
+      "His insulin pen was switched with veterinary-grade concentrated insulin",
+      "Fantasy league platform shows ₹2.5 crore in suspicious betting transactions",
+      "Live stream captured 15,000 viewers when technical difficulties started",
+      "His phone revealed evidence of 'match-fixing' and 'insider betting' operations",
+      "₹45 lakh in cryptocurrency wallets found linked to illegal betting syndicates",
+      "Gaming room's biometric lock was bypassed using cloned fingerprints",
+      "Match prediction algorithms were manipulated to favor specific betting outcomes"
     ],
     suspects: [
       {
         id: 1,
-        name: "Krishnan Pillai",
-        age: 47,
-        role: "Electrical Supervisor",
-        details:
-          "Chief electrician managing all factory electrical systems. Recently demoted by Ramesh after workers complained about unsafe electrical conditions. Has complete knowledge of electrical panels.",
-        motive:
-          "Blamed by Ramesh for safety violations and faced termination before retirement",
-        alibi:
-          "Claims he was checking machinery on factory floor during night rounds",
-        evidence:
-          "No workers saw him on rounds, and electrical modifications required expert knowledge",
-      },
-      {
-        id: 2,
-        name: "Mala Agarwal",
-        age: 43,
-        role: "Factory Manager & Ramesh's Wife",
-        details:
-          "Co-manages factory operations and recently increased Ramesh's life insurance. Discovered Ramesh was planning to sell factory to foreign company, eliminating local jobs.",
-        motive:
-          "Ramesh's factory sale would destroy local community and her social standing",
-        alibi:
-          "Says she was in quality control section checking fabric batches",
-        evidence:
-          "Quality logs show no inspections that night, and she knew Ramesh's office routine",
-      },
-      {
-        id: 3,
-        name: "Murugan Selvan",
-        age: 39,
-        role: "Production Supervisor",
-        details:
-          "Supervises night shift production and worker relations. Recently caught by Ramesh selling factory products illegally to competitors. Faces criminal charges and job loss.",
-        motive:
-          "Ramesh was filing police complaint for theft and industrial espionage",
-        alibi: "Claims he was monitoring production line throughout the night",
-        evidence:
-          "Production records show line was stopped for 45 minutes during murder time",
-      },
-    ],
-    killer: 1,
-    solution:
-      "Krishnan Pillai killed Ramesh. As electrical supervisor, he had expert knowledge to rig the deadly trap, faced termination for safety violations, and no workers could verify his alibi during the critical time period.",
-  },
-
-  {
-    id: 12,
-    title: "The Call Center Night Shift Murder",
-    description:
-      "Pradeep Singh, night shift manager at TechServe Call Center in Bangalore, was found strangled with a phone cable in his cabin. The murder occurred during a power outage when backup generators failed. Three team leads were on duty during the night shift.",
-    clues: [
-      "Pradeep was strangled with a phone cable during 20-minute power outage at 2:30 AM",
-      "His computer showed emails about 'employee data theft investigation'",
-      "The backup generator was manually switched off from the basement",
-      "CCTV system failed exactly when power went out - too convenient to be accidental",
-      "Employee salary account access logs show unauthorized login attempts",
-    ],
-    suspects: [
-      {
-        id: 1,
-        name: "Rohit Jain",
+        name: "Rohit Sharma",
         age: 31,
-        role: "Technical Team Lead",
+        role: "Tech Developer & Platform Coder",
         details:
-          "Manages IT systems and has access to all technical areas including basement. Recently caught by Pradeep hacking into employee salary accounts to steal personal information.",
+          "Develops fantasy league algorithms and betting systems. Recently caught by Sachin manipulating match prediction codes to favor his own fantasy teams and win prize money consistently.",
         motive:
-          "Pradeep was about to report him for identity theft and financial fraud",
-        alibi: "Claims he was troubleshooting system issues at his workstation",
-        evidence:
-          "His workstation shows no activity during power outage, and he has basement access",
-      },
-      {
-        id: 2,
-        name: "Anjali Nair",
-        age: 28,
-        role: "Customer Service Lead",
-        details:
-          "Senior customer service representative recently promoted to team lead. Discovered by Pradeep to be selling customer data to marketing companies for extra income.",
-        motive:
-          "Faced criminal charges for data privacy violations and immediate termination",
+          "Sachin was planning to expose his algorithm manipulation and file criminal charges for fraud",
         alibi:
-          "Says she was handling escalated customer calls during power outage",
-        evidence: "Call logs show no escalated calls during outage period",
-      },
-      {
-        id: 3,
-        name: "Vikash Kumar",
-        age: 26,
-        role: "Quality Assurance Lead",
-        details:
-          "Monitors call quality and employee performance. Recently discovered by Pradeep selling positive performance reviews to underperforming employees for money.",
-        motive:
-          "Pradeep was planning to file corruption charges, destroying his career",
-        alibi: "Claims he was reviewing call recordings in the quality room",
+          "Claims he was monitoring live platform performance during high-traffic match",
         evidence:
-          "Quality room computers were offline during power outage, making work impossible",
-      },
-    ],
-    killer: 1,
-    solution:
-      "Rohit Jain killed Pradeep. He had technical knowledge to disable the generator and CCTV, faced serious charges for hacking salary accounts, and his alibi of working during a power outage was impossible to verify.",
-  },
-
-  {
-    id: 13,
-    title: "The Restaurant Poisoning Case",
-    description:
-      "Chef Arjun Reddy, owner of 'Spice Garden' restaurant in Hyderabad, was found dead from oleander poisoning in his kitchen after the dinner service. The poison was in his tasting spoon used for quality checking. Three kitchen staff were present during evening service.",
-    clues: [
-      "Chef Arjun died from oleander poisoning around 10:30 PM after tasting a curry",
-      "Oleander leaves were found chopped and mixed in the curry base stock",
-      "Restaurant's herb garden shows freshly cut oleander bush behind the building",
-      "Food safety inspection reports show recent violations and threat of closure",
-      "His recipe notebook contained threatening notes about 'exposing kitchen secrets'",
-    ],
-    suspects: [
-      {
-        id: 1,
-        name: "Sunil Varma",
-        age: 34,
-        role: "Sous Chef",
-        details:
-          "Assistant chef and Arjun's cooking partner for 5 years. Recently discovered that Arjun was selling their joint recipes to competitor restaurants without sharing profits.",
-        motive:
-          "Arjun was stealing and selling their collaborative recipes, cheating him of rightful earnings",
-        alibi: "Claims he was preparing desserts in the pastry section",
-        evidence:
-          "Pastry section was empty during murder time, and he knew Arjun's tasting routine",
+          "Server logs show no monitoring activity, and he has access to biometric security systems",
       },
       {
         id: 2,
-        name: "Lakshmi Devi",
-        age: 41,
-        role: "Head Cook",
-        details:
-          "Senior cook who prepares all curry bases and stocks. Recently threatened by Arjun with termination for using expired ingredients to save costs and increase her profit margins.",
-        motive:
-          "Faced job loss and criminal charges for food safety violations",
-        alibi: "Says she was cleaning cooking stations after dinner service",
-        evidence:
-          "She prepared the curry base and had access to oleander from herb garden",
-      },
-      {
-        id: 3,
-        name: "Raman Rao",
-        age: 29,
-        role: "Kitchen Helper",
-        details:
-          "Junior kitchen staff who handles ingredient preparation and herb cutting. Recently caught by Arjun stealing expensive spices and selling them in local market.",
-        motive:
-          "Arjun was filing police complaint for theft, leading to arrest and job loss",
-        alibi: "Claims he was washing dishes in the back area",
-        evidence:
-          "Dishwashing area shows no recent activity, and he cut all herbs including oleander",
-      },
-    ],
-    killer: 2,
-    solution:
-      "Lakshmi Devi killed Chef Arjun. She prepared the curry base where oleander was mixed, faced termination and criminal charges for food safety violations, and had easy access to the herb garden to obtain the poison.",
-  },
-
-  {
-    id: 14,
-    title: "The Motorcycle Showroom Murder",
-    description:
-      "Suresh Patil, owner of Patil Motors motorcycle showroom in Pune, was found crushed under a falling motorcycle during inventory check. The bike rack had been tampered with to create a deadly trap. Three employees were working late for month-end inventory.",
-    clues: [
-      "Suresh was crushed by falling motorcycles when rack support was deliberately weakened",
-      "Metal bolts holding the rack were partially unscrewed to create delayed collapse",
-      "Showroom insurance policy had recent ₹25 lakh increase for 'accidental death'",
-      "Sales records show ₹8 lakh missing from customer advance payments",
-      "His phone contained threatening messages about loan recovery from finance companies",
-    ],
-    suspects: [
-      {
-        id: 1,
-        name: "Ganesh Kulkarni",
-        age: 36,
-        role: "Showroom Manager",
-        details:
-          "Manages daily operations and customer finances. Recently discovered by Suresh to be diverting customer advance payments to his personal account. Has access to all showroom areas.",
-        motive:
-          "Suresh was about to file embezzlement charges, leading to arrest and financial ruin",
-        alibi: "Claims he was updating inventory records in the office",
-        evidence:
-          "Office computer shows no activity during murder time, and he had tools to tamper with rack",
-      },
-      {
-        id: 2,
-        name: "Priya Patil",
-        age: 32,
-        role: "Accounts Manager & Suresh's Wife",
-        details:
-          "Handles showroom accounts and recently increased Suresh's insurance policy. Discovered Suresh was planning to sell showroom to pay debts without consulting her.",
-        motive:
-          "Suresh's business failure would destroy their family's financial security",
-        alibi:
-          "Says she was reconciling daily cash collections in accounts room",
-        evidence:
-          "Cash register shows no reconciliation that evening, and she knew inventory timing",
-      },
-      {
-        id: 3,
-        name: "Mahesh Jadhav",
+        name: "Priya Agarwal",
         age: 28,
-        role: "Senior Mechanic",
+        role: "Customer Support Lead & Insider Trading Expert",
         details:
-          "Chief mechanic responsible for showroom maintenance and bike setup. Recently terminated by Suresh for selling showroom parts to unauthorized dealers.",
+          "Handles customer complaints and payment disputes. Recently discovered by Sachin to be selling team composition and insider information to professional betting syndicates for huge profits.",
         motive:
-          "Suresh was filing criminal charges for theft, destroying his career and reputation",
-        alibi: "Claims he was organizing tools in the service bay",
+          "Sachin was reporting her insider trading to cyber crime department, facing arrest",
+        alibi:
+          "Says she was managing customer complaints during live match issues",
         evidence:
-          "Service bay was already organized, and he had mechanical knowledge to sabotage rack",
-      },
-    ],
-    killer: 1,
-    solution:
-      "Ganesh Kulkarni killed Suresh. He had mechanical access to tamper with the rack bolts, faced immediate arrest for embezzlement of ₹8 lakh, and his computer alibi was false as no work was done during murder time.",
-  },
-
-  {
-    id: 15,
-    title: "The Wedding Hall Gas Leak Murder",
-    description:
-      "Mohan Sharma, owner of 'Royal Wedding Palace' in Jaipur, was found dead from gas poisoning in the kitchen during a wedding preparation. The LPG cylinder valve had been tampered with. Three catering staff were preparing for the next day's wedding.",
-    clues: [
-      "Mohan died from LPG gas poisoning around 11 PM during wedding prep",
-      "The gas cylinder valve was deliberately loosened to cause maximum leakage",
-      "Kitchen's ventilation fan was switched off from the main electrical panel",
-      "Wedding contract files show dispute over ₹5 lakh advance payment",
-      "His phone revealed threatening calls from money lenders about loan repayment",
-    ],
-    suspects: [
-      {
-        id: 1,
-        name: "Kailash Agarwal",
-        age: 44,
-        role: "Head Caterer",
-        details:
-          "Chief catering contractor for the wedding hall. Recently cheated by Mohan who took advance payment but hired a cheaper caterer for the next day's wedding, breaking their agreement.",
-        motive:
-          "Mohan's betrayal cost him ₹5 lakh in advance payments and damaged his catering reputation",
-        alibi: "Claims he was checking food preparations in the main kitchen",
-        evidence:
-          "Kitchen staff confirm he went to gas cylinder area alone for 'safety check'",
-      },
-      {
-        id: 2,
-        name: "Sunita Sharma",
-        age: 39,
-        role: "Hall Manager & Mohan's Wife",
-        details:
-          "Co-manages wedding hall operations and recently increased Mohan's life insurance. Discovered Mohan was secretly selling the property to pay gambling debts.",
-        motive:
-          "Mohan's property sale would leave her homeless and financially ruined",
-        alibi: "Says she was coordinating with decorators in the main hall",
-        evidence:
-          "Decorators confirm she left for 'kitchen inspection' during murder time",
+          "Support ticket system shows no activity during murder time window",
       },
       {
         id: 3,
-        name: "Raju Meena",
-        age: 31,
-        role: "Kitchen Supervisor",
-        details:
-          "Supervises kitchen operations and gas safety. Recently caught by Mohan selling wedding hall's expensive utensils and equipment to other caterers.",
-        motive:
-          "Mohan was filing theft charges, leading to arrest and job termination",
-        alibi: "Claims he was supervising food preparation in cooking area",
-        evidence:
-          "Cooking area was unattended during murder time, and he has gas system knowledge",
-      },
-    ],
-    killer: 1,
-    solution:
-      "Kailash Agarwal killed Mohan. He lost ₹5 lakh due to Mohan's betrayal, had direct access to the gas cylinder area during his 'safety check,' and faced complete financial ruin and reputation damage in the catering business.",
-  },
-
-  {
-    id: 16,
-    title: "The Gym Trainer Steroid Murder",
-    description:
-      "Rohit Khanna, popular fitness trainer at 'Power Gym' in Delhi, was found dead from insulin overdose in the gym's supplement room. He was diabetic but the dose was lethal. Three gym staff had access to the supplement storage and his medical supplies.",
-    clues: [
-      "Rohit died from massive insulin overdose around 9 PM after evening workout session",
-      "His insulin pen was replaced with concentrated veterinary insulin",
-      "Gym's supplement room shows signs of recent break-in but nothing was stolen",
-      "His phone contained evidence of illegal steroid dealing to gym members",
-      "Bank records show large cash deposits inconsistent with trainer salary",
-    ],
-    suspects: [
-      {
-        id: 1,
-        name: "Vikram Singh",
+        name: "Dr. Anjali Verma",
         age: 35,
-        role: "Gym Owner",
+        role: "Medical Advisor & Insulin Expert",
         details:
-          "Gym owner who recently discovered Rohit was selling illegal steroids to members from the gym premises. Faces license cancellation and legal troubles if exposed.",
+          "Provides medical consultation for gaming addiction and manages Sachin's diabetes care. Recently threatened by Sachin with medical board complaint for prescribing performance drugs to gaming addicts.",
         motive:
-          "Rohit's steroid dealing threatened to destroy his gym business and land him in legal trouble",
-        alibi: "Claims he was meeting with potential investors in his office",
-        evidence:
-          "No investors visited that evening, and he had access to supplement room and medical supplies",
-      },
-      {
-        id: 2,
-        name: "Dr. Anjali Gupta",
-        age: 41,
-        role: "Gym Nutritionist",
-        details:
-          "In-house nutritionist who manages member health supplements. Recently threatened by Rohit with exposure for prescribing steroids without proper medical examination.",
-        motive:
-          "Rohit was blackmailing her about illegal steroid prescriptions, threatening her medical license",
+          "Medical license cancellation would destroy her specialized gaming addiction practice",
         alibi:
-          "Says she was consulting with evening batch members about their diet plans",
+          "Claims she was attending virtual medical conference during match time",
         evidence:
-          "No diet consultations were scheduled, and she has access to medical-grade insulin",
+          "Conference registration shows no login activity, and she has access to veterinary insulin",
       },
       {
-        id: 3,
-        name: "Sanjay Kumar",
-        age: 28,
-        role: "Assistant Trainer",
+        id: 4,
+        name: "Kiran Kumar",
+        age: 33,
+        role: "Payment Gateway Manager & Money Launderer",
         details:
-          "Junior trainer working under Rohit's supervision. Recently cut out of steroid dealing profits by Rohit despite helping with distribution to gym members.",
+          "Manages financial transactions and payment processing. Recently caught by Sachin laundering illegal betting money through fake fantasy league transactions and cryptocurrency conversions.",
         motive:
-          "Rohit cheated him out of steroid money and threatened to blame everything on him if caught",
+          "Sachin was exposing his money laundering operation to financial crime authorities",
         alibi:
-          "Claims he was conducting personal training session with a member",
+          "Says he was processing high-volume match payments and cryptocurrency transfers",
         evidence:
-          "Member confirms session ended early, and he knew Rohit's insulin routine and storage location",
-      },
-    ],
-    killer: 2,
-    solution:
-      "Dr. Anjali Gupta killed Rohit. As a medical professional, she had access to veterinary insulin, faced loss of medical license due to Rohit's blackmail, and had no scheduled consultations to support her alibi.",
-  },
-
-  {
-    id: 17,
-    title: "The Auto Rickshaw Driver Union Murder",
-    description:
-      "Raman Das, president of Auto Rickshaw Drivers Union in Kolkata, was found dead in his auto from carbon monoxide poisoning. The exhaust pipe had been redirected into the passenger compartment. Three union members were present during the evening meeting.",
-    clues: [
-      "Raman died from carbon monoxide poisoning while sitting in his auto around 8 PM",
-      "Exhaust pipe was professionally redirected with rubber tubing into passenger area",
-      "Union fund records show ₹3 lakh missing from member contributions",
-      "His notebook contained evidence of corruption in auto stand allocation bribes",
-      "Recent threats were made against him for exposing illegal meter tampering racket",
-    ],
-    suspects: [
-      {
-        id: 1,
-        name: "Subhash Mandal",
-        age: 46,
-        role: "Union Secretary",
-        details:
-          "Union's financial secretary who controls member contributions and fund distribution. Recently discovered by Raman to be embezzling union funds for personal use.",
-        motive:
-          "Raman was about to expose his embezzlement of ₹3 lakh union funds to members",
-        alibi: "Claims he was distributing union meeting notices to drivers",
-        evidence:
-          "No meeting notices were distributed, and he has mechanical knowledge for exhaust modification",
+          "Payment gateway logs show automated processing, no manual intervention required",
       },
       {
-        id: 2,
-        name: "Gopal Biswas",
-        age: 38,
-        role: "Union Vice President",
+        id: 5,
+        name: "Vikash Singh",
+        age: 29,
+        role: "Live Streaming Manager & View Manipulation Expert",
         details:
-          "Ambitious union leader who wanted Raman's president position. Recently opposed by Raman for trying to increase corruption in auto stand allocations.",
+          "Handles live commentary streaming and audience engagement. Recently discovered by Sachin to be inflating viewer numbers using bot farms and selling fake engagement to advertisers.",
         motive:
-          "Raman blocked his corruption schemes and stood in way of his presidential ambitions",
-        alibi: "Says he was meeting with new auto drivers for union membership",
-        evidence: "No new memberships were processed that evening",
+          "Sachin was terminating advertising contracts and filing fraud charges for fake viewership",
+        alibi:
+          "Claims he was managing live stream technical issues during match broadcast",
+        evidence:
+          "Stream technical logs show issues were pre-programmed, and he created the 'technical difficulties'",
       },
       {
-        id: 3,
-        name: "Karim Sheikh",
-        age: 52,
-        role: "Senior Union Member",
+        id: 6,
+        name: "Sunita Malhotra",
+        age: 36,
+        role: "Sachin's Wife & Business Co-owner",
         details:
-          "Veteran auto driver and union member for 15 years. Recently exposed by Raman for running illegal meter tampering service charging ₹500 per auto modification.",
+          "Co-manages business operations and recently discovered Sachin was planning to shut down the platform after authorities started investigating illegal betting connections.",
         motive:
-          "Raman was reporting his meter tampering racket to transport authorities, facing arrest",
-        alibi: "Claims he was repairing his auto in the garage area",
+          "Platform shutdown would destroy their family business and livelihood",
+        alibi:
+          "Says she was managing household work and not involved in match commentary",
         evidence:
-          "His auto showed no signs of recent repair, and he has mechanical skills for exhaust work",
+          "Neighbors confirm she was absent from home during match time",
+      },
+      {
+        id: 7,
+        name: "Rajesh Gupta",
+        age: 42,
+        role: "Betting Syndicate Representative & Criminal Associate",
+        details:
+          "Represents illegal betting syndicate that was using fantasy league for money laundering. Recently threatened by Sachin with police exposure unless they stopped using his platform.",
+        motive:
+          "Sachin's police cooperation would destroy entire betting syndicate operation",
+        alibi:
+          "Claims he was managing betting operations for other cricket matches",
+        evidence:
+          "Betting records show no other match activity during murder time",
+      },
+      {
+        id: 8,
+        name: "Kavya Reddy",
+        age: 26,
+        role: "Data Analyst & Match Fixing Coordinator",
+        details:
+          "Analyzes player performance data and creates match predictions. Recently caught by Sachin coordinating with players' associates to fix specific match outcomes for betting profits.",
+        motive:
+          "Sachin was reporting match-fixing evidence to BCCI and police, leading to criminal charges",
+        alibi:
+          "Claims she was analyzing real-time match data and updating predictions",
+        evidence:
+          "Data analysis tools show no active work during murder time period",
+      },
+      {
+        id: 9,
+        name: "Arjun Joshi",
+        age: 34,
+        role: "Security Expert & Biometric System Hacker",
+        details:
+          "Manages platform security and gaming room access controls. Recently caught by Sachin selling user data and creating backdoors for external hackers to manipulate betting outcomes.",
+        motive:
+          "Sachin was filing cyber crime case for data theft and security breaches",
+        alibi:
+          "Says he was monitoring security systems during high-traffic match period",
+        evidence:
+          "Security monitoring logs show automated systems, and he created the biometric bypass",
+      },
+      {
+        id: 10,
+        name: "Deepika Sharma",
+        age: 30,
+        role: "Cryptocurrency Consultant & Illegal Exchange Operator",
+        details:
+          "Manages cryptocurrency transactions and digital payment systems. Recently discovered by Sachin to be operating illegal crypto exchange using fantasy league platform as front.",
+        motive:
+          "Sachin was reporting illegal crypto operations to financial intelligence unit",
+        alibi:
+          "Claims she was processing cryptocurrency transactions for international betting clients",
+        evidence:
+          "Crypto transaction logs show automated processing during murder time",
       },
     ],
     killer: 3,
     solution:
-      "Karim Sheikh killed Raman. He had the mechanical skills to redirect the exhaust pipe, faced criminal charges for the meter tampering racket, and his repair alibi was false as his auto showed no maintenance work.",
+      "Dr. Anjali Verma killed Sachin. As his medical advisor, she had access to his diabetes medication and could obtain veterinary insulin, faced medical license cancellation for prescribing illegal performance drugs, and her virtual conference alibi was false as no login activity was recorded.",
   },
 
   {
-    id: 18,
-    title: "The Pharmacy Drug Overdose Murder",
+    id: 12,
+    title: "The YouTube Channel Empire Murder",
     description:
-      "Ashok Mishra, owner of Mishra Medical Store in Varanasi, was found dead from morphine overdose in his pharmacy. The controlled drug register showed unauthorized access. Three pharmacy staff had access to the controlled substances vault.",
+      "Rahul Kapoor, owner of 'TechGuru India' YouTube channel with 5 million subscribers, was found dead from hydrogen sulfide poisoning in his home studio during a live product review stream. The poison gas was released through the studio's ventilation system during peak viewership hours when 200,000+ people were watching live.",
     clues: [
-      "Ashok died from morphine overdose around 10 PM after closing time",
-      "Controlled substances vault was opened with correct combination",
-      "Drug register shows missing morphine vials worth ₹50,000",
-      "His computer revealed investigation into illegal prescription drug sales",
-      "Recent complaints filed against pharmacy for selling drugs without prescription",
+      "Rahul died from hydrogen sulfide gas poisoning at 8:45 PM during live iPhone review stream",
+      "Gas was released through studio's HVAC system using remote-controlled valves",
+      "Live stream captured his death with 200,000+ viewers witnessing the incident",
+      "His phone revealed evidence of 'fake product reviews' and 'paid promotional fraud'",
+      "Recent investigation showed ₹1.2 crore in undisclosed brand partnerships",
+      "Studio's air filtration system was professionally modified to distribute poison gas",
+      "Multiple fake YouTube channels were found copying his content with monetization theft",
+      "Brand partnership contracts contained illegal exclusivity clauses worth crores",
+      "Advanced deepfake technology was being used to create fake celebrity endorsements"
     ],
     suspects: [
       {
         id: 1,
-        name: "Dr. Ramesh Tiwari",
-        age: 49,
-        role: "Consulting Pharmacist",
+        name: "Anita Sharma",
+        age: 29,
+        role: "Video Editor & Content Theft Mastermind",
         details:
-          "Licensed pharmacist who manages controlled substances and prescriptions. Recently caught by Ashok selling morphine and other controlled drugs to addicts without prescriptions.",
+          "Edits all videos and manages content production. Recently caught by Rahul stealing original content ideas and selling them to competing tech channels for huge profits.",
         motive:
-          "Ashok was reporting him to pharmacy board for illegal drug sales, ending his career",
-        alibi: "Claims he was at home reviewing patient prescriptions",
+          "Rahul was filing copyright violation case and threatening to destroy her editing career",
+        alibi:
+          "Claims she was editing next day's video content in separate editing room",
         evidence:
-          "No prescription reviews were documented, and he knew vault combination and morphine handling",
+          "Video editing software shows no activity, and she has access to studio HVAC controls",
       },
       {
         id: 2,
-        name: "Sunita Mishra",
-        age: 44,
-        role: "Store Manager & Ashok's Wife",
+        name: "Dr. Vikash Verma",
+        age: 36,
+        role: "Chemical Engineer & HVAC System Expert",
         details:
-          "Co-manages pharmacy operations and has access to all areas. Recently discovered Ashok was planning to sell pharmacy to chain store, eliminating family business.",
+          "Manages studio's technical equipment and air quality systems. Recently discovered by Rahul to be selling technical specifications of reviewed products to competing manufacturers.",
         motive:
-          "Ashok's sale to corporate chain would destroy their family legacy and her livelihood",
-        alibi: "Says she was doing monthly inventory in storage room",
+          "Rahul was reporting industrial espionage to tech companies, leading to criminal charges",
+        alibi:
+          "Says he was monitoring air quality and ventilation during live stream",
         evidence:
-          "Inventory sheets show no work was done, and she had vault access",
+          "Air quality monitoring was automated, and he has expert knowledge of gas distribution systems",
       },
       {
         id: 3,
-        name: "Raj Kumar Yadav",
+        name: "Priya Malhotra",
+        age: 27,
+        role: "Brand Partnership Manager & Fraud Coordinator",
+        details:
+          "Negotiates brand deals and manages sponsored content. Recently caught by Rahul creating fake engagement metrics and selling inflated sponsorship packages to brands.",
+        motive:
+          "Rahul was exposing her sponsorship fraud to brand partners, destroying her marketing career",
+        alibi:
+          "Claims she was negotiating with international brands during live stream",
+        evidence:
+          "No international calls logged, and she knew about Rahul's streaming schedule",
+      },
+      {
+        id: 4,
+        name: "Rohit Gupta",
+        age: 33,
+        role: "Tech Consultant & Product Information Seller",
+        details:
+          "Provides technical insights for product reviews and has early access to unreleased products. Recently caught by Rahul selling confidential product information to tech blogs before official reviews.",
+        motive:
+          "Rahul was reporting him to tech companies for NDA violations, ending consulting career",
+        alibi:
+          "Says he was researching technical specifications for upcoming reviews",
+        evidence:
+          "No research activity logged in his systems during murder time",
+      },
+      {
+        id: 5,
+        name: "Kavya Singh",
+        age: 25,
+        role: "Social Media Manager & Fake Engagement Creator",
+        details:
+          "Manages social media promotion and audience engagement. Recently discovered by Rahul to be running bot farms creating fake views, likes, and comments for monetary gain.",
+        motive:
+          "Rahul was reporting bot farm operations to YouTube, leading to channel termination and legal action",
+        alibi:
+          "Claims she was managing live chat moderation during stream",
+        evidence:
+          "Chat moderation was automated with AI tools during live streams",
+      },
+      {
+        id: 6,
+        name: "Sunita Kapoor",
+        age: 34,
+        role: "Rahul's Wife & Financial Manager",
+        details:
+          "Manages channel finances and tax planning. Recently discovered Rahul was planning to sell the channel to corporate media house without sharing profits with family.",
+        motive:
+          "Channel sale would leave her with nothing after years of supporting his career",
+        alibi:
+          "Says she was managing household affairs and avoiding live stream area",
+        evidence:
+          "Phone location data shows she was near studio during murder time",
+      },
+      {
+        id: 7,
+        name: "Kiran Agarwal",
         age: 31,
-        role: "Pharmacy Assistant",
+        role: "Competing YouTuber & Content Saboteur",
         details:
-          "Senior assistant who handles drug storage and customer service. Recently threatened by Ashok with police complaint for stealing expensive medicines and selling them privately.",
+          "Runs competing tech channel 'TechMaster Pro' and recently lost major sponsorships when Rahul exposed his fake product testing and plagiarized reviews.",
         motive:
-          "Ashok was filing theft charges, leading to arrest and career destruction",
-        alibi: "Claims he was organizing medicine shelves in main store area",
-        evidence:
-          "Shelves were already organized, and he had access to controlled substances area",
-      },
-    ],
-    killer: 1,
-    solution:
-      "Dr. Ramesh Tiwari killed Ashok. As a licensed pharmacist, he had expertise in morphine dosage and administration, faced loss of pharmacy license for illegal drug sales, and had legitimate access to the controlled substances vault.",
-  },
-
-  {
-    id: 19,
-    title: "The Fish Market Vendor Murder",
-    description:
-      "Shankar Rao, wholesale fish vendor at Crawford Market, Mumbai, was found dead from tetrodotoxin poisoning in his shop. The poison came from improperly handled pufferfish. Three market vendors were working in adjacent stalls during evening hours.",
-    clues: [
-      "Shankar died from tetrodotoxin (pufferfish poison) around 7 PM during market closing",
-      "Pufferfish organs were found mixed in his evening meal box",
-      "Market ledger shows dispute over ₹2 lakh fish supply contract with hotel chain",
-      "His shop's ice storage showed signs of temperature tampering to spoil fish stock",
-      "Recent complaints filed about his practice of selling day-old fish as fresh catch",
-    ],
-    suspects: [
-      {
-        id: 1,
-        name: "Mohan Patil",
-        age: 42,
-        role: "Competing Fish Vendor",
-        details:
-          "Rival fish vendor whose business was suffering due to Shankar's unfair practices. Recently lost major hotel contract to Shankar who undercut prices by selling old fish as fresh.",
-        motive:
-          "Shankar's unfair competition destroyed his business and livelihood prospects",
+          "Rahul's exposures destroyed his channel growth and brand partnerships",
         alibi:
-          "Claims he was cleaning his stall and preparing for next day's stock",
+          "Claims he was creating his own live stream competing with Rahul's timing",
         evidence:
-          "His stall was already clean, and he had access to pufferfish and knowledge of toxin danger",
+          "No live stream was conducted, and his channel shows no activity",
       },
       {
-        id: 2,
-        name: "Lata Rao",
+        id: 8,
+        name: "Rajesh Joshi",
         age: 38,
-        role: "Fish Cleaner & Shankar's Wife",
+        role: "MCN Representative & Revenue Manipulator",
         details:
-          "Cleans and prepares fish for sale, knows about fish toxins and proper handling. Recently discovered Shankar was planning to abandon family and move to Goa with younger woman.",
+          "Represents Multi-Channel Network that manages Rahul's monetization. Recently caught by Rahul manipulating ad revenue reports and keeping larger percentage than contracted.",
         motive:
-          "Shankar's abandonment would leave her penniless with children to support",
-        alibi: "Says she was preparing evening meal for Shankar in back room",
+          "Rahul was terminating MCN contract and filing fraud charges for revenue theft",
+        alibi:
+          "Says he was analyzing revenue reports for multiple channels during stream",
         evidence:
-          "She prepared his meal and had expert knowledge of pufferfish toxin preparation",
+          "Revenue analysis tools show no active work during murder time",
       },
       {
-        id: 3,
-        name: "Ravi Nair",
-        age: 35,
-        role: "Market Supervisor",
+        id: 9,
+        name: "Deepika Reddy",
+        age: 28,
+        role: "Deepfake Technology Expert & Illegal Content Creator",
         details:
-          "Market area supervisor who monitors vendor activities and resolves disputes. Recently bribed by Shankar to ignore health violations but threatened with exposure when demanding more money.",
+          "Creates AI-generated content and manages advanced video technology. Recently caught by Rahul using deepfake technology to create fake celebrity endorsements for fraudulent products.",
         motive:
-          "Shankar was threatening to expose their bribery arrangement to market authorities",
+          "Rahul was reporting deepfake fraud to cyber crime authorities, leading to arrest",
         alibi:
-          "Claims he was inspecting other vendor stalls for closing time violations",
+          "Claims she was rendering AI-generated content for other projects",
         evidence:
-          "No inspection reports were filed, and he knew about pufferfish shipments",
+          "Rendering processes were automated and didn't require manual intervention",
+      },
+      {
+        id: 10,
+        name: "Arjun Malhotra",
+        age: 32,
+        role: "Product Manufacturer Representative & Bribery Coordinator",
+        details:
+          "Represents tech manufacturing company that was bribing Rahul for positive reviews. Recently threatened by Rahul with exposure unless they stopped demanding fake positive reviews for defective products.",
+        motive:
+          "Rahul's exposure would destroy company reputation and lead to product liability lawsuits",
+        alibi:
+          "Says he was attending company board meeting during live stream",
+        evidence:
+          "Board meeting was cancelled, and company calendar shows no scheduled meetings",
       },
     ],
     killer: 2,
     solution:
-      "Lata Rao killed Shankar. She prepared his evening meal, had expert knowledge of pufferfish toxin preparation from years of fish cleaning, and faced abandonment and poverty when Shankar planned to leave for Goa with another woman.",
+      "Dr. Vikash Verma killed Rahul. As a chemical engineer managing the HVAC system, he had expert knowledge to modify the ventilation for gas distribution, faced criminal charges for industrial espionage, and his air quality monitoring alibi was false as the system was automated.",
+  },
+
+  {
+    id: 13,
+    title: "The EdTech Startup Boardroom Poisoning",
+    description:
+      "Arjun Agarwal, CEO of 'LearnSmart EdTech' valued at ₹500 crore, was found dead from ricin poisoning during a crucial board meeting with international investors. The poison was in his coffee served during the presentation about company's IPO plans. Multiple co-founders, investors, and employees were present in the boardroom.",
+    clues: [
+      "Arjun died from ricin poisoning at 3:30 PM during live investor presentation via video call",
+      "Poison was specifically in his personalized coffee mug that only he used",
+      "Board meeting was discussing ₹2000 crore IPO with international investment firms",
+      "His laptop revealed evidence of 'fake student enrollment' and 'inflated course completion rates'",
+      "Recent audit discovered ₹150 crore in fictitious revenue from non-existent students",
+      "Company's AI teaching algorithms were stealing content from premium international platforms",
+      "Multiple fake company certifications were being sold to students who never took courses",
+      "Boardroom's coffee machine was tampered with to deliver poison to specific mug",
+      "International investors were planning due diligence that would expose all frauds",
+      "Ricin was extracted from castor beans grown in company's 'wellness garden'"
+    ],
+    suspects: [
+      {
+        id: 1,
+        name: "Priya Sharma",
+        age: 32,
+        role: "Co-founder & CTO",
+        details:
+          "Technical co-founder who built the learning platform. Recently discovered by Arjun to be stealing AI algorithms from international EdTech companies and faces criminal charges for intellectual property theft.",
+        motive:
+          "Arjun was planning to expose her algorithm theft to international partners during IPO process",
+        alibi:
+          "Claims she was demonstrating technical features to investors via video call",
+        evidence:
+          "Technical demonstration was pre-recorded, and she prepared Arjun's personalized coffee",
+      },
+      {
+        id: 2,
+        name: "Dr. Rajesh Verma",
+        age: 45,
+        role: "Chief Academic Officer & Content Fraudster",
+        details:
+          "Manages curriculum development and academic partnerships. Recently caught by Arjun selling fake degree certificates and creating non-existent university partnerships for credibility.",
+        motive:
+          "Arjun was reporting academic fraud to education ministry, ending his career in education sector",
+        alibi:
+          "Says he was presenting academic partnerships and course statistics to investors",
+        evidence:
+          "Academic presentation contained fabricated data that he couldn't defend under questioning",
+      },
+      {
+        id: 3,
+        name: "Kavya Singh",
+        age: 28,
+        role: "CFO & Financial Fraudster",
+        details:
+          "Manages company finances and investor relations. Recently discovered by Arjun to be creating fake student enrollments and inflating revenue numbers for investor presentations.",
+        motive:
+          "Arjun was planning to expose her financial fraud during IPO due diligence process",
+        alibi:
+          "Claims she was presenting financial projections and revenue models to investors",
+        evidence:
+          "Financial models were automated presentations, and she had access to coffee preparation area",
+      },
+      {
+        id: 4,
+        name: "Rohit Malhotra",
+        age: 34,
+        role: "VP Sales & Fake Certification Seller",
+        details:
+          "Handles corporate sales and enterprise partnerships. Recently caught by Arjun selling fake professional certifications to working professionals without them completing courses.",
+        motive:
+          "Arjun was filing criminal charges for certificate fraud and educational scam",
+        alibi:
+          "Says he was discussing enterprise client testimonials and case studies",
+        evidence:
+          "Client testimonials were fabricated, and he knew about Arjun's coffee preferences",
+      },
+      {
+        id: 5,
+        name: "Sunita Agarwal",
+        age: 36,
+        role: "Arjun's Wife & HR Head",
+        details:
+          "Manages human resources and internal operations. Recently discovered Arjun was planning to remove her from company leadership before IPO and divorce her for a younger employee.",
+        motive:
+          "Arjun's IPO plans would leave her with minimal shares and destroy her personal and professional life",
+        alibi:
+          "Claims she was managing boardroom logistics and serving refreshments to attendees",
+        evidence:
+          "She served Arjun's coffee and had intimate knowledge of his daily routines",
+      },
+      {
+        id: 6,
+        name: "Kiran Kumar",
+        age: 30,
+        role: "VP Technology & Data Theft Coordinator",
+        details:
+          "Manages platform technology and student data systems. Recently caught by Arjun selling student personal data to marketing companies and educational loan sharks.",
+        motive:
+          "Arjun was reporting data privacy violations to cyber crime authorities",
+        alibi:
+          "Says he was managing technical aspects of video call with international investors",
+        evidence:
+          "Video call technology was managed by external AV team during meeting",
+      },
+      {
+        id: 7,
+        name: "Dr. Anjali Gupta",
+        age: 37,
+        role: "International Relations Head & Partnership Fraudster",
+        details:
+          "Manages global partnerships and accreditation claims. Recently discovered by Arjun to be creating fake international university partnerships and selling admission guarantees.",
+        motive:
+          "Arjun was exposing her fake partnerships to international investors, destroying global expansion plans",
+        alibi:
+          "Claims she was coordinating with international partners via video conference",
+        evidence:
+          "No international partners were actually connected during the call",
+      },
+      {
+        id: 8,
+        name: "Vikash Reddy",
+        age: 33,
+        role: "Venture Capitalist & Insider Trading Expert",
+        details:
+          "Represents major VC firm investing in the company. Recently caught by Arjun using insider information to manipulate EdTech sector stocks and profit from market movements.",
+        motive:
+          "Arjun was reporting insider trading to SEBI, leading to massive financial penalties and career destruction",
+        alibi:
+          "Says he was evaluating investment terms and IPO valuation models",
+        evidence:
+          "Investment evaluation was completed before meeting, and he had access to refreshment area",
+      },
+      {
+        id: 9,
+        name: "Deepika Joshi",
+        age: 29,
+        role: "Marketing Head & Student Exploitation Coordinator",
+        details:
+          "Manages marketing campaigns and student acquisition. Recently caught by Arjun running predatory loan schemes targeting desperate students with false job placement guarantees.",
+        motive:
+          "Arjun was exposing her predatory practices to consumer protection authorities",
+        alibi:
+          "Claims she was presenting marketing success metrics and student testimonials",
+        evidence:
+          "Student testimonials were fake, created using AI voice synthesis technology",
+      },
+      {
+        id: 10,
+        name: "Arjuna Verma",
+        age: 31,
+        role: "Quality Assurance Head & Content Piracy Coordinator",
+        details:
+          "Manages course quality and content standards. Recently caught by Arjun systematically pirating premium courses from international platforms and selling them as original content.",
+        motive:
+          "Arjun was filing international copyright violation case, leading to massive legal liability",
+        alibi:
+          "Says he was ensuring technical quality of presentation and managing AV equipment",
+        evidence:
+          "AV equipment was managed by external team, and he had botany knowledge for ricin extraction",
+      },
+      {
+        id: 11,
+        name: "Ravi Agarwal",
+        age: 39,
+        role: "Board Member & Regulatory Compliance Fraudster",
+        details:
+          "Independent board member responsible for compliance and governance. Recently discovered by Arjun to be taking bribes from regulatory authorities to overlook compliance violations.",
+        motive:
+          "Arjun was exposing his regulatory bribery to board of directors and authorities",
+        alibi:
+          "Claims he was reviewing governance policies and compliance frameworks during meeting",
+        evidence:
+          "Governance review was scheduled for after the investor presentation",
+      },
+    ],
+    killer: 1,
+    solution:
+      "Priya Sharma killed Arjun. As co-founder and CTO, she had intimate access to prepare his personalized coffee, faced exposure of massive intellectual property theft during the IPO due diligence, and her technical demonstration alibi was false as it was pre-recorded content.",
+  },
+
+  {
+    id: 14,
+    title: "The Cryptocurrency Exchange Scandal Murder",
+    description:
+      "Vikram Singh, founder of 'CoinTradeIndia' cryptocurrency exchange, was found dead from polonium-210 poisoning in his secure trading floor office. The radioactive poison was placed in his daily protein shake. The murder occurred during a live trading session when the exchange was processing ₹100 crore+ in daily transactions.",
+    clues: [
+      "Vikram died from polonium-210 poisoning at 11:30 AM during peak trading hours",
+      "Radioactive poison was mixed in his post-workout protein shake kept in office refrigerator",
+      "Live trading floor cameras captured his collapse during active cryptocurrency transactions",
+      "His encrypted phone revealed evidence of 'fake cryptocurrency creation' and 'pump-and-dump schemes'",
+      "Recent investigation showed ₹500 crore in missing customer funds from exchange wallets",
+      "Multiple fake cryptocurrency tokens were being created and sold to unsuspecting investors",
+      "Exchange's cold storage wallets were found to be empty despite showing customer balances",
+      "Polonium-210 source traced to medical equipment supplier with inside connections",
+      "International money laundering investigation was closing in on exchange operations",
+      "Advanced blockchain forensics revealed systematic customer fund diversion to personal accounts",
+      "Government cryptocurrency ban was imminent, threatening to shut down entire operation"
+    ],
+    suspects: [
+      {
+        id: 1,
+        name: "Dr. Priya Malhotra",
+        age: 33,
+        role: "Chief Security Officer & Blockchain Expert",
+        details:
+          "Manages exchange security and blockchain technology. Recently caught by Vikram manipulating blockchain transactions and stealing customer cryptocurrency for personal trading profits.",
+        motive:
+          "Vikram was filing criminal charges for cryptocurrency theft and blockchain manipulation",
+        alibi:
+          "Claims she was monitoring security systems during active trading session",
+        evidence:
+          "Security monitoring was automated, and she had access to medical suppliers through her PhD in nuclear chemistry",
+      },
+      {
+        id: 2,
+        name: "Rohit Verma",
+        age: 35,
+        role: "CTO & Smart Contract Fraudster",
+        details:
+          "Develops exchange technology and smart contract systems. Recently discovered by Vikram to be creating backdoors in smart contracts that automatically steal percentage of transactions.",
+        motive:
+          "Vikram was exposing his smart contract fraud to international blockchain community",
+        alibi:
+          "Says he was debugging critical trading algorithms during market volatility",
+        evidence:
+          "Trading algorithms were running automatically without manual intervention required",
+      },
+      {
+        id: 3,
+        name: "Kavya Sharma",
+        age: 29,
+        role: "CFO & Customer Fund Embezzler",
+        details:
+          "Manages exchange finances and customer fund custody. Recently caught by Vikram systematically transferring customer funds to offshore accounts and creating fake balance sheets.",
+        motive:
+          "Vikram was reporting massive embezzlement to financial intelligence unit and international authorities",
+        alibi:
+          "Claims she was reconciling customer deposits and withdrawal requests",
+        evidence:
+          "Financial reconciliation was automated with AI tools, and she prepared Vikram's daily protein shake",
+      },
+      {
+        id: 4,
+        name: "Kiran Kumar",
+        age: 31,
+        role: "Head of Trading & Market Manipulator",
+        details:
+          "Manages institutional trading and market making operations. Recently discovered by Vikram to be coordinating pump-and-dump schemes with external criminal syndicates.",
+        motive:
+          "Vikram was exposing market manipulation to SEBI and international financial crime authorities",
+        alibi:
+          "Says he was executing high-volume trades during peak market activity",
+        evidence:
+          "Trading execution was managed by algorithmic systems during peak hours",
+      },
+      {
+        id: 5,
+        name: "Dr. Anjali Gupta",
+        age: 36,
+        role: "Compliance Officer & Regulatory Fraud Coordinator",
+        details:
+          "Handles regulatory compliance and government relations. Recently caught by Vikram bribing regulatory officials and creating fake compliance reports to avoid exchange shutdowns.",
+        motive:
+          "Vikram was reporting regulatory bribery to anti-corruption authorities, ending her legal career",
+        alibi:
+          "Claims she was preparing compliance reports for regulatory submission",
+        evidence:
+          "Compliance reports were template-based and already completed before murder time",
+      },
+      {
+        id: 6,
+        name: "Sunita Singh",
+        age: 34,
+        role: "Vikram's Wife & Business Partner",
+        details:
+          "Co-owns exchange and manages external partnerships. Recently discovered Vikram was planning to flee country with remaining customer funds and abandon the family business.",
+        motive:
+          "Vikram's escape plan would leave her to face criminal charges and financial ruin",
+        alibi:
+          "Says she was managing business partnerships and external meetings",
+        evidence:
+          "No external meetings were scheduled, and she had access to office refrigerator",
+      },
+      {
+        id: 7,
+        name: "Rajesh Agarwal",
+        age: 38,
+        role: "International Relations Manager & Money Launderer",
+        details:
+          "Manages global partnerships and international fund transfers. Recently caught by Vikram coordinating with international criminal organizations for cryptocurrency money laundering.",
+        motive:
+          "Vikram was cooperating with international law enforcement to expose money laundering network",
+        alibi:
+          "Claims he was coordinating with international exchanges during Asian trading hours",
+        evidence:
+          "International coordination was managed through automated systems",
+      },
+      {
+        id: 8,
+        name: "Deepika Reddy",
+        age: 27,
+        role: "Customer Support Manager & Identity Theft Coordinator",
+        details:
+          "Handles customer service and account management. Recently discovered by Vikram to be stealing customer identity documents and selling them to criminal networks.",
+        motive:
+          "Vikram was filing identity theft charges and exposing document forgery operation",
+        alibi:
+          "Says she was handling customer complaints during trading hours",
+        evidence:
+          "Customer support was managed by AI chatbots during peak trading sessions",
+      },
+      {
+        id: 9,
+        name: "Arjun Malhotra",
+        age: 32,
+        role: "Risk Management Head & Insider Trading Coordinator",
+        details:
+          "Manages trading risks and algorithmic safeguards. Recently caught by Vikram using advance knowledge of market movements to profit from insider trading schemes.",
+        motive:
+          "Vikram was reporting insider trading to market regulators and criminal authorities",
+        alibi:
+          "Claims he was monitoring market risks during volatile trading session",
+        evidence:
+          "Risk monitoring was automated with machine learning algorithms",
+      },
+      {
+        id: 10,
+        name: "Dr. Vikash Kumar",
+        age: 40,
+        role: "Medical Equipment Supplier & Polonium Source",
+        details:
+          "Supplies medical equipment to exchange wellness center and has access to radioactive materials for medical imaging. Recently blackmailed by Vikram for providing illegal medical services.",
+        motive:
+          "Vikram was exposing his illegal medical practice and radioactive material handling violations",
+        alibi:
+          "Says he was conducting medical equipment maintenance in wellness center",
+        evidence:
+          "No maintenance was scheduled, and he had direct access to polonium-210 through medical supplies",
+      },
+      {
+        id: 11,
+        name: "Neha Verma",
+        age: 28,
+        role: "Blockchain Analyst & Token Creation Fraudster",
+        details:
+          "Analyzes blockchain transactions and creates new cryptocurrency tokens. Recently caught by Vikram creating fake tokens and conducting ICO scams worth ₹200 crore.",
+        motive:
+          "Vikram was exposing her ICO fraud to international blockchain authorities and investors",
+        alibi:
+          "Claims she was analyzing blockchain transactions for suspicious activity",
+        evidence:
+          "Blockchain analysis was conducted by automated monitoring systems",
+      },
+      {
+        id: 12,
+        name: "Ravi Joshi",
+        age: 34,
+        role: "Government Liaison & Bribery Coordinator",
+        details:
+          "Manages government relations and regulatory negotiations. Recently caught by Vikram systematically bribing government officials to delay cryptocurrency regulation implementation.",
+        motive:
+          "Vikram was exposing government bribery to anti-corruption authorities, leading to criminal charges",
+        alibi:
+          "Says he was negotiating with government officials about regulatory compliance",
+        evidence:
+          "No government meetings were scheduled during trading hours",
+      },
+    ],
+    killer: 3,
+    solution:
+      "Kavya Sharma killed Vikram. As CFO, she had embezzled ₹500 crore in customer funds, prepared his daily protein shake giving her opportunity to add polonium-210, and faced massive international criminal charges that would destroy her life and lead to decades in prison.",
+  },
+
+  {
+    id: 15,
+    title: "The Smart City IoT Infrastructure Murder",
+    description:
+      "Dr. Rajesh Agarwal, Chief Technology Officer of 'SmartCityIndia' government project, was found dead from targeted electromagnetic pulse exposure in his IoT control center. The murder was executed through the city's own smart infrastructure - traffic lights, surveillance cameras, and 5G towers were weaponized to create a focused electromagnetic attack during a live demonstration to international delegates.",
+    clues: [
+      "Rajesh died from targeted EMP exposure at 2:15 PM during live smart city demonstration",
+      "City's IoT infrastructure was hacked to focus electromagnetic radiation on his exact location",
+      "International delegates were witnessing smart traffic, surveillance, and utility management systems",
+      "His secured laptop revealed 'smart city surveillance state' and 'citizen privacy violation' evidence",
+      "Recent investigation discovered ₹2000 crore in inflated infrastructure costs and fake vendor payments",
+      "Advanced AI algorithms were illegally profiling citizens using facial recognition and behavior tracking",
+      "5G tower network was modified to create directed energy weapon targeting specific coordinates",
+      "City's emergency response systems were disabled during the attack to prevent medical assistance",
+      "Quantum encryption keys were stolen and sold to foreign intelligence agencies",
+      "Smart city sensors were collecting illegal biometric data and selling to private companies",
+      "International cybersecurity audit was scheduled to expose all security vulnerabilities next week"
+    ],
+    suspects: [
+      {
+        id: 1,
+        name: "Dr. Priya Verma",
+        age: 34,
+        role: "IoT Security Architect & System Backdoor Creator",
+        details:
+          "Designs security protocols for smart city infrastructure. Recently caught by Rajesh installing backdoors in IoT devices for foreign intelligence agencies and criminal hackers.",
+        motive:
+          "Rajesh was exposing her espionage activities to national security agencies, leading to treason charges",
+        alibi:
+          "Claims she was monitoring security protocols during international demonstration",
+        evidence:
+          "Security monitoring was automated, and she had expert knowledge to weaponize IoT infrastructure",
+      },
+      {
+        id: 2,
+        name: "Rohit Malhotra",
+        age: 37,
+        role: "5G Network Engineer & Directed Energy Specialist",
+        details:
+          "Manages 5G infrastructure and electromagnetic systems. Recently discovered by Rajesh to be selling network access to criminal organizations for illegal surveillance and tracking.",
+        motive:
+          "Rajesh was filing criminal charges for network security violations and terrorist facilitation",
+        alibi:
+          "Says he was optimizing 5G performance during high-bandwidth demonstration",
+        evidence:
+          "5G optimization was managed by AI systems, and he has expertise in electromagnetic weapon creation",
+      },
+      {
+        id: 3,
+        name: "Kavya Singh",
+        age: 30,
+        role: "AI Ethics Officer & Citizen Surveillance Coordinator",
+        details:
+          "Manages AI algorithms and citizen data ethics. Recently caught by Rajesh using AI to create illegal citizen social credit scores and selling data to authoritarian regimes.",
+        motive:
+          "Rajesh was exposing her surveillance state operations to human rights organizations and media",
+        alibi:
+          "Claims she was demonstrating ethical AI applications to international delegates",
+        evidence:
+          "AI demonstration was pre-programmed, and she had access to citizen tracking algorithms",
+      },
+      {
+        id: 4,
+        name: "Kiran Kumar",
+        age: 32,
+        role: "Cybersecurity Head & Quantum Encryption Thief",
+        details:
+          "Manages cybersecurity infrastructure and quantum communication systems. Recently caught by Rajesh stealing quantum encryption keys and selling them to foreign intelligence services.",
+        motive:
+          "Rajesh was reporting quantum espionage to national security agencies, leading to life imprisonment for treason",
+        alibi:
+          "Says he was ensuring cybersecurity during live demonstration with international audience",
+        evidence:
+          "Cybersecurity was managed by automated threat detection systems during demonstration",
+      },
+      {
+        id: 5,
+        name: "Dr. Anjali Gupta",
+        age: 35,
+        role: "Smart Healthcare Director & Biometric Data Seller",
+        details:
+          "Manages smart healthcare systems and medical IoT devices. Recently discovered by Rajesh to be illegally collecting citizen biometric data and selling to insurance and pharmaceutical companies.",
+        motive:
+          "Rajesh was exposing her medical data theft to health ministry and privacy authorities",
+        alibi:
+          "Claims she was showcasing smart healthcare innovations to international health delegates",
+        evidence:
+          "Healthcare showcase was automated with pre-recorded demonstrations",
+      },
+      {
+        id: 6,
+        name: "Sunita Agarwal",
+        age: 36,
+        role: "Rajesh's Wife & Project Coordinator",
+        details:
+          "Coordinates smart city project implementation and government relations. Recently discovered Rajesh was planning to expose entire project as surveillance state experiment and flee to foreign country.",
+        motive:
+          "Rajesh's whistleblowing would destroy their family reputation and result in her arrest as co-conspirator",
+        alibi:
+          "Says she was coordinating demonstration logistics and managing international delegate relations",
+        evidence:
+          "Demonstration logistics were managed by event management company, not internally",
+      },
+      {
+        id: 7,
+        name: "Vikash Reddy",
+        age: 33,
+        role: "Data Analytics Head & Citizen Profiling Expert",
+        details:
+          "Manages big data analytics and citizen behavior prediction systems. Recently caught by Rajesh using smart city data to create illegal citizen profiling for political manipulation.",
+        motive:
+          "Rajesh was exposing political manipulation algorithms to election commission and media",
+        alibi:
+          "Claims he was analyzing real-time city data during demonstration to showcase analytics capabilities",
+        evidence:
+          "Data analytics demonstration used pre-processed data sets, not real-time analysis",
+      },
+      {
+        id: 8,
+        name: "Rajesh Joshi",
+        age: 39,
+        role: "Government Liaison & Corruption Coordinator",
+        details:
+          "Manages government relations and project funding. Recently caught by Rajesh systematically inflating infrastructure costs and distributing bribes to government officials for project approvals.",
+        motive:
+          "Rajesh was exposing ₹2000 crore corruption to anti-corruption authorities and audit agencies",
+        alibi:
+          "Says he was briefing government officials and international delegates about project success metrics",
+        evidence:
+          "Project briefings were conducted by technical teams, not administrative staff",
+      },
+      {
+        id: 9,
+        name: "Deepika Sharma",
+        age: 28,
+        role: "Emergency Response Manager & System Saboteur",
+        details:
+          "Manages smart city emergency response systems and crisis coordination. Recently discovered by Rajesh to be selling emergency response data to criminal organizations for planning attacks.",
+        motive:
+          "Rajesh was reporting her terrorist facilitation to national security and anti-terrorism agencies",
+        alibi:
+          "Claims she was monitoring emergency response systems during demonstration for safety protocols",
+        evidence:
+          "Emergency systems were disabled during murder time, and she has access to disable medical response",
+      },
+      {
+        id: 10,
+        name: "Arjun Verma",
+        age: 31,
+        role: "International Relations Manager & Technology Transfer Criminal",
+        details:
+          "Manages international partnerships and technology sharing agreements. Recently caught by Rajesh illegally transferring smart city technology to hostile foreign governments.",
+        motive:
+          "Rajesh was exposing technology transfer violations to foreign ministry and intelligence agencies",
+        alibi:
+          "Says he was facilitating international delegate technical discussions and partnership negotiations",
+        evidence:
+          "International discussions were managed by technical demonstration teams",
+      },
+      {
+        id: 11,
+        name: "Dr. Neha Malhotra",
+        age: 29,
+        role: "Research Director & Intellectual Property Thief",
+        details:
+          "Manages smart city research and development programs. Recently caught by Rajesh stealing research data and selling proprietary algorithms to competing international smart city projects.",
+        motive:
+          "Rajesh was filing intellectual property theft charges and exposing research espionage",
+        alibi:
+          "Claims she was presenting research innovations and development roadmap to international research community",
+        evidence:
+          "Research presentations were pre-recorded and didn't require live management",
+      },
+      {
+        id: 12,
+        name: "Ravi Kumar",
+        age: 34,
+        role: "Infrastructure Vendor & Fake Equipment Supplier",
+        details:
+          "Represents major infrastructure vendor supplying IoT devices and smart systems. Recently caught by Rajesh supplying substandard equipment and inflating costs through fake vendor networks.",
+        motive:
+          "Rajesh was exposing vendor fraud to procurement authorities and project auditors",
+        alibi:
+          "Says he was showcasing vendor equipment capabilities and technical specifications to international buyers",
+        evidence:
+          "Equipment showcase was managed by technical demonstration teams, not vendor representatives",
+      },
+      {
+        id: 13,
+        name: "Kavita Joshi",
+        age: 32,
+        role: "Public Relations Manager & Media Manipulation Expert",
+        details:
+          "Manages public communications and media relations for smart city project. Recently caught by Rajesh creating fake positive news coverage and suppressing citizen privacy concerns through paid media campaigns.",
+        motive:
+          "Rajesh was exposing media manipulation to press council and transparency activists",
+        alibi:
+          "Claims she was managing media coverage and international press relations during demonstration",
+        evidence:
+          "Media coverage was managed by external PR agency during international events",
+      },
+    ],
+    killer: 2,
+    solution:
+      "Rohit Malhotra killed Rajesh. As the 5G network engineer, he had the technical expertise to weaponize the electromagnetic infrastructure into a directed energy weapon, faced criminal charges for selling network access to terrorist organizations, and his 5G optimization alibi was false as the systems were automated during demonstrations.",
+  },
+
+  {
+    id: 16,
+    title: "The Metaverse Real Estate Empire Murder",
+    description:
+      "Arjun Mehta, founder of 'VirtualLandIndia' - India's largest metaverse real estate platform, was found dead from targeted neurotoxin exposure delivered through his VR headset during a live virtual property auction. The poison was aerosolized and released through the headset's ventilation system while he was conducting a ₹500 crore virtual land sale to international buyers in the metaverse.",
+    clues: [
+      "Arjun died from aerosolized tetrodotoxin at 4:45 PM during live VR auction with 50,000+ attendees",
+      "VR headset's ventilation system was modified to deliver concentrated neurotoxin through air circulation",
+      "Virtual auction was selling prime metaverse land parcels worth ₹500 crore to international crypto investors",
+      "His encrypted brain-computer interface revealed 'virtual property fraud' and 'NFT money laundering' operations",
+      "Recent investigation discovered ₹1500 crore in fake virtual property sales and non-existent metaverse developments",
+      "Advanced AI avatars were being used to impersonate celebrities and sell fraudulent virtual real estate",
+      "Blockchain records show systematic manipulation of virtual land ownership and fake transaction histories",
+      "Neurotoxin delivery required expertise in aerosol engineering and VR hardware modification",
+      "International regulatory investigation was closing in on cross-border virtual asset fraud",
+      "Deep learning algorithms were creating fake virtual worlds that didn't actually exist in the metaverse",
+      "Quantum computing systems were being used to forge blockchain transactions and virtual property deeds",
+      "Virtual reality gambling dens were operating illegally within the metaverse real estate developments"
+    ],
+    suspects: [
+      {
+        id: 1,
+        name: "Dr. Priya Sharma",
+        age: 32,
+        role: "VR Technology Director & Hardware Sabotage Expert",
+        details:
+          "Manages VR hardware systems and metaverse infrastructure. Recently caught by Arjun installing backdoors in VR headsets to steal user biometric data and sell to surveillance companies.",
+        motive:
+          "Arjun was exposing her biometric theft to privacy authorities and technology regulators",
+        alibi:
+          "Claims she was monitoring VR system performance during high-traffic virtual auction",
+        evidence:
+          "VR monitoring was automated with AI systems, and she has expertise in aerosol delivery through VR hardware",
+      },
+      {
+        id: 2,
+        name: "Rohit Agarwal",
+        age: 35,
+        role: "Blockchain Engineer & Transaction Manipulator",
+        details:
+          "Develops blockchain infrastructure for virtual property ownership. Recently discovered by Arjun to be creating fake transaction histories and manipulating ownership records for massive fraud.",
+        motive:
+          "Arjun was filing criminal charges for blockchain fraud and virtual property theft worth ₹1500 crore",
+        alibi:
+          "Says he was managing blockchain validation during high-volume property transactions",
+        evidence:
+          "Blockchain validation was handled by distributed mining networks, not manual management",
+      },
+      {
+        id: 3,
+        name: "Kavya Singh",
+        age: 29,
+        role: "AI Avatar Designer & Celebrity Impersonation Fraudster",
+        details:
+          "Creates AI avatars and virtual personalities for metaverse marketing. Recently caught by Arjun using deepfake technology to impersonate celebrities and sell fake endorsed virtual properties.",
+        motive:
+          "Arjun was exposing celebrity impersonation fraud to entertainment industry and legal authorities",
+        alibi:
+          "Claims she was managing AI avatar interactions during live virtual auction",
+        evidence:
+          "AI avatar management was automated during large events, and she had access to neurotoxin through AI research labs",
+      },
+      {
+        id: 4,
+        name: "Dr. Kiran Kumar",
+        age: 33,
+        role: "Neuroscience Consultant & Brain-Computer Interface Hacker",
+        details:
+          "Manages brain-computer interface technology for enhanced VR experiences. Recently caught by Arjun stealing user neural patterns and selling cognitive data to manipulation research companies.",
+        motive:
+          "Arjun was reporting neural data theft to bioethics authorities and neuroscience regulatory boards",
+        alibi:
+          "Says he was monitoring user neural responses during immersive virtual auction experience",
+        evidence:
+          "Neural monitoring was managed by automated EEG systems, and he has expertise in neurotoxin delivery",
+      },
+      {
+        id: 5,
+        name: "Anjali Verma",
+        age: 31,
+        role: "Quantum Computing Specialist & Blockchain Forger",
+        details:
+          "Manages quantum computing systems for complex metaverse calculations. Recently discovered by Arjun using quantum computers to forge blockchain transactions and create fake virtual property ownership.",
+        motive:
+          "Arjun was exposing quantum fraud to international cybersecurity agencies and blockchain authorities",
+        alibi:
+          "Claims she was running quantum calculations for virtual world rendering during auction",
+        evidence:
+          "Quantum calculations were automated and didn't require manual intervention during auction",
+      },
+      {
+        id: 6,
+        name: "Sunita Mehta",
+        age: 34,
+        role: "Arjun's Wife & International Money Laundering Coordinator",
+        details:
+          "Manages international business relationships and cross-border transactions. Recently discovered Arjun was planning to cooperate with international law enforcement to expose money laundering network.",
+        motive:
+          "Arjun's cooperation would expose her international money laundering operations and result in extradition",
+        alibi:
+          "Says she was coordinating with international buyers and managing currency conversions",
+        evidence:
+          "International coordination was managed by automated trading systems during auction",
+      },
+      {
+        id: 7,
+        name: "Vikash Reddy",
+        age: 36,
+        role: "Virtual World Architect & Non-existent Development Creator",
+        details:
+          "Designs virtual worlds and metaverse environments. Recently caught by Arjun creating fake virtual developments that don't actually exist but are being sold to investors for billions.",
+        motive:
+          "Arjun was exposing his fake development fraud to international investors and regulatory authorities",
+        alibi:
+          "Claims he was managing virtual world infrastructure during live property showcasing",
+        evidence:
+          "Virtual world management was automated with procedural generation algorithms",
+      },
+      {
+        id: 8,
+        name: "Rajesh Malhotra",
+        age: 38,
+        role: "Cryptocurrency Exchange Representative & Pump-and-Dump Coordinator",
+        details:
+          "Represents crypto exchange facilitating virtual property transactions. Recently caught by Arjun coordinating pump-and-dump schemes using virtual real estate to manipulate cryptocurrency prices.",
+        motive:
+          "Arjun was exposing market manipulation to financial crime authorities and international regulators",
+        alibi:
+          "Says he was managing cryptocurrency liquidity during high-volume virtual property purchases",
+        evidence:
+          "Cryptocurrency liquidity was managed by automated market makers during large transactions",
+      },
+      {
+        id: 9,
+        name: "Deepika Joshi",
+        age: 27,
+        role: "Virtual Gaming Director & Illegal Gambling Operator",
+        details:
+          "Manages virtual gaming experiences within metaverse properties. Recently discovered by Arjun operating illegal gambling dens within virtual real estate developments.",
+        motive:
+          "Arjun was exposing illegal virtual gambling to gaming authorities and law enforcement",
+        alibi:
+          "Claims she was managing virtual gaming experiences for auction attendees",
+        evidence:
+          "Virtual gaming was automated with AI game masters during auction events",
+      },
+      {
+        id: 10,
+        name: "Dr. Arjun Gupta",
+        age: 34,
+        role: "Aerosol Engineering Consultant & Chemical Weapons Expert",
+        details:
+          "Provides aerosol delivery consulting for VR scent systems and atmospheric effects. Recently caught by Arjun developing chemical weapon delivery systems disguised as VR enhancement technology.",
+        motive:
+          "Arjun was reporting chemical weapons development to defense authorities and international weapons control agencies",
+        alibi:
+          "Says he was managing atmospheric effects and scent delivery during immersive auction experience",
+        evidence:
+          "Atmospheric effects were pre-programmed and automated during auction, and he has direct access to neurotoxin aerosol delivery",
+      },
+      {
+        id: 11,
+        name: "Neha Agarwal",
+        age: 30,
+        role: "International Regulatory Liaison & Government Bribery Coordinator",
+        details:
+          "Manages international regulatory compliance and government relations. Recently caught by Arjun systematically bribing international regulators to avoid virtual asset fraud investigations.",
+        motive:
+          "Arjun was exposing international bribery to anti-corruption agencies across multiple countries",
+        alibi:
+          "Claims she was managing regulatory compliance during international virtual property sales",
+        evidence:
+          "Regulatory compliance was managed by legal automation systems during international transactions",
+      },
+      {
+        id: 12,
+        name: "Ravi Verma",
+        age: 33,
+        role: "Virtual Identity Theft Coordinator & Avatar Hijacking Expert",
+        details:
+          "Manages virtual identity systems and avatar authentication. Recently caught by Arjun stealing user virtual identities and selling hijacked avatars to criminal organizations.",
+        motive:
+          "Arjun was filing virtual identity theft charges with cyber crime authorities",
+        alibi:
+          "Says he was managing avatar authentication during high-security virtual auction",
+        evidence:
+          "Avatar authentication was managed by biometric AI systems during auction",
+      },
+      {
+        id: 13,
+        name: "Kavita Singh",
+        age: 28,
+        role: "NFT Fraud Specialist & Digital Art Money Launderer",
+        details:
+          "Manages NFT creation and digital asset authentication. Recently discovered by Arjun creating fake NFTs and using digital art sales for massive money laundering operations.",
+        motive:
+          "Arjun was exposing NFT fraud to art authentication authorities and financial crime units",
+        alibi:
+          "Claims she was managing NFT authentication during virtual property and digital asset auction",
+        evidence:
+          "NFT authentication was automated with blockchain verification systems",
+      },
+      {
+        id: 14,
+        name: "Dr. Sanjay Kumar",
+        role: "Biotechnology Consultant & Neurotoxin Synthesizer",
+        age: 39,
+        details:
+          "Provides biotechnology consulting for VR health monitoring systems. Recently caught by Arjun synthesizing illegal neurotoxins and selling them to assassination networks through dark web.",
+        motive:
+          "Arjun was exposing neurotoxin synthesis to bioweapons authorities and international security agencies",
+        alibi:
+          "Says he was monitoring user health metrics during extended VR auction session",
+        evidence:
+          "Health monitoring was automated with wearable sensors, and he has direct access to tetrodotoxin synthesis",
+      },
+    ],
+    killer: 10,
+    solution:
+      "Dr. Arjun Gupta killed Arjun Mehta. As an aerosol engineering consultant, he had the specific expertise to modify VR headset ventilation systems for neurotoxin delivery, faced exposure for developing chemical weapons disguised as VR technology, and his atmospheric effects alibi was false as the systems were pre-programmed and automated.",
+  },
+
+  {
+    id: 17,
+    title: "The Quantum Computing Startup Assassination",
+    description:
+      "Dr. Kavya Malhotra, CEO of 'QuantumLeapIndia' - the nation's first quantum computing startup, was found dead from precisely targeted gamma radiation exposure in her quantum lab during a live demonstration to defense ministry officials. The quantum computer itself was weaponized to focus gamma rays with mathematical precision while she was showcasing breakthrough quantum encryption algorithms.",
+    clues: [
+      "Kavya died from targeted gamma radiation at 11:30 AM during classified defense ministry quantum demonstration",
+      "Quantum computer's particle accelerator was modified to focus gamma rays on her exact coordinates",
+      "Defense demonstration was showcasing quantum encryption for national security applications worth ₹5000 crore",
+      "Her quantum-encrypted files revealed 'quantum supremacy fraud' and 'fake breakthrough claims'",
+      "Recent investigation discovered quantum computer was actually classical computer with fake quantum claims",
+      "Advanced quantum algorithms were being sold to foreign intelligence agencies for code-breaking",
+      "Quantum entanglement experiments were cover for developing quantum communication weapons",
+      "Gamma radiation required precise quantum mechanical calculations for targeted delivery",
+      "International quantum physics community was about to expose the fake quantum computer fraud",
+      "Quantum encryption keys were being sold to terrorist organizations for unbreakable communications",
+      "China's quantum computing espionage network had infiltrated the startup through multiple agents",
+      "Nuclear regulatory audit was scheduled to discover unauthorized radioactive material handling",
+      "Quantum computer's cooling system contained illegal nuclear materials for weapons development"
+    ],
+    suspects: [
+      {
+        id: 1,
+        name: "Dr. Rohit Sharma",
+        age: 36,
+        role: "Quantum Physicist & Fake Science Coordinator",
+        details:
+          "Lead quantum physicist responsible for quantum algorithm development. Recently caught by Kavya publishing fake quantum breakthrough papers and selling false research to international quantum community.",
+        motive:
+          "Kavya was exposing his fake quantum physics research to international scientific community and regulatory authorities",
+        alibi:
+          "Claims he was monitoring quantum entanglement experiments during defense demonstration",
+        evidence:
+          "Quantum experiments were automated with AI monitoring, and he has expertise in gamma radiation targeting",
+      },
+      {
+        id: 2,
+        name: "Priya Agarwal",
+        age: 33,
+        role: "Quantum Security Director & Encryption Key Seller",
+        details:
+          "Manages quantum security protocols and encryption systems. Recently discovered by Kavya selling quantum encryption keys to foreign intelligence agencies and terrorist networks.",
+        motive:
+          "Kavya was reporting encryption key theft to national security agencies and international counter-terrorism units",
+        alibi:
+          "Says she was demonstrating quantum encryption capabilities to defense ministry officials",
+        evidence:
+          "Quantum encryption demonstration was pre-programmed and didn't require live management",
+      },
+      {
+        id: 3,
+        name: "Dr. Kiran Verma",
+        age: 34,
+        role: "Particle Physics Engineer & Gamma Ray Weapons Expert",
+        details:
+          "Manages particle accelerator and radiation systems within quantum computer. Recently caught by Kavya developing gamma ray weapons disguised as quantum computing research.",
+        motive:
+          "Kavya was exposing weapons development to defense authorities and international atomic energy agencies",
+        alibi:
+          "Claims he was calibrating particle accelerator systems during quantum demonstration",
+        evidence:
+          "Particle accelerator calibration was automated during demonstrations, and he modified the system for targeted radiation",
+      },
+      {
+        id: 4,
+        name: "Anjali Singh",
+        age: 31,
+        role: "Quantum Algorithm Designer & Chinese Espionage Agent",
+        details:
+          "Develops quantum algorithms and computational models. Recently discovered by Kavya to be Chinese intelligence agent stealing quantum computing secrets for foreign military applications.",
+        motive:
+          "Kavya was exposing her espionage activities to counter-intelligence agencies and national security authorities",
+        alibi:
+          "Says she was running quantum algorithm demonstrations for defense ministry evaluation",
+        evidence:
+          "Algorithm demonstrations were automated with pre-computed results during official presentations",
+      },
+      {
+        id: 5,
+        name: "Vikash Kumar",
+        age: 35,
+        role: "Quantum Materials Scientist & Nuclear Weapons Developer",
+        details:
+          "Manages quantum computer materials and cooling systems. Recently caught by Kavya using quantum lab facilities to develop nuclear weapons materials for international arms dealers.",
+        motive:
+          "Kavya was reporting nuclear weapons development to atomic energy authorities and international weapons inspectors",
+        alibi:
+          "Claims he was monitoring quantum computer cooling systems and material stability",
+        evidence:
+          "Cooling system monitoring was automated, and he had access to radioactive materials for weapons development",
+      },
+      {
+        id: 6,
+        name: "Sunita Malhotra",
+        age: 35,
+        role: "Kavya's Wife & International Arms Dealer",
+        details:
+          "Manages international business development and quantum technology partnerships. Recently discovered by Kavya to be selling quantum weapons technology to international terrorist organizations.",
+        motive:
+          "Kavya's exposure would destroy international arms dealing network and result in terrorism charges",
+        alibi:
+          "Says she was coordinating with international defense contractors during demonstration",
+        evidence:
+          "International coordination was managed by automated communication systems",
+      },
+      {
+        id: 7,
+        name: "Rajesh Gupta",
+        age: 37,
+        role: "Defense Ministry Liaison & Classified Information Seller",
+        details:
+          "Manages government relations and defense contracts. Recently caught by Kavya selling classified quantum computing research to hostile foreign governments.",
+        motive:
+          "Kavya was exposing classified information theft to military intelligence and counter-espionage agencies",
+        alibi:
+          "Claims he was briefing defense ministry officials about quantum computing applications",
+        evidence:
+          "Defense briefings were conducted by technical demonstration teams, not liaison staff",
+      },
+      {
+        id: 8,
+        name: "Dr. Deepika Reddy",
+        age: 29,
+        role: "Quantum Communication Expert & Terrorist Network Facilitator",
+        details:
+          "Develops quantum communication protocols and secure messaging systems. Recently discovered by Kavya providing unbreakable quantum communication systems to international terrorist networks.",
+        motive:
+          "Kavya was exposing terrorist facilitation to counter-terrorism agencies and international security organizations",
+        alibi:
+          "Says she was demonstrating quantum communication security to defense ministry officials",
+        evidence:
+          "Communication demonstrations were pre-recorded and automated during official presentations",
+      },
+      {
+        id: 9,
+        name: "Arjun Joshi",
+        age: 32,
+        role: "Quantum Computing Fraud Coordinator & Investment Scammer",
+        details:
+          "Manages quantum computing claims and investor relations. Recently caught by Kavya coordinating massive investment fraud using fake quantum computing breakthroughs.",
+        motive:
+          "Kavya was exposing ₹5000 crore investment fraud to financial crime authorities and international investors",
+        alibi:
+          "Claims he was managing investor communications during defense ministry demonstration",
+        evidence:
+          "Investor communications were managed by automated PR systems during official demonstrations",
+      },
+      {
+        id: 10,
+        name: "Neha Verma",
+        age: 28,
+        role: "Nuclear Safety Officer & Radioactive Material Smuggler",
+        details:
+          "Manages nuclear safety protocols and radioactive material handling. Recently caught by Kavya smuggling radioactive materials to international weapons developers.",
+        motive:
+          "Kavya was exposing radioactive smuggling to nuclear regulatory authorities and international atomic energy agencies",
+        alibi:
+          "Says she was monitoring radiation safety during quantum computer operation",
+        evidence:
+          "Radiation monitoring was automated with sensor networks during demonstrations",
+      },
+      {
+        id: 11,
+        name: "Dr. Ravi Agarwal",
+        age: 38,
+        role: "International Quantum Research Director & Scientific Fraud Coordinator",
+        details:
+          "Manages international quantum research collaborations and scientific publications. Recently caught by Kavya coordinating international scientific fraud and fake quantum breakthrough claims.",
+        motive:
+          "Kavya was exposing scientific fraud to international quantum physics community and research authorities",
+        alibi:
+          "Claims he was coordinating with international quantum research institutions during demonstration",
+        evidence:
+          "International research coordination was managed by automated collaboration platforms",
+      },
+      {
+        id: 12,
+        name: "Kavita Kumar",
+        age: 30,
+        role: "Quantum Startup Competitor & Industrial Saboteur",
+        details:
+          "Represents competing quantum computing startup and industrial espionage network. Recently caught by Kavya conducting industrial sabotage and stealing quantum computing intellectual property.",
+        motive:
+          "Kavya was exposing industrial espionage to intellectual property authorities and competitive intelligence agencies",
+        alibi:
+          "Says she was observing demonstration as potential quantum computing collaboration partner",
+        evidence:
+          "Collaboration discussions were managed by business development teams, not competitive representatives",
+      },
+      {
+        id: 13,
+        name: "Dr. Sanjay Malhotra",
+        age: 39,
+        role: "Quantum Weapons Consultant & Military Technology Developer",
+        details:
+          "Provides quantum technology consulting for military applications. Recently caught by Kavya developing quantum weapons systems for international military contractors.",
+        motive:
+          "Kavya was exposing quantum weapons development to international weapons control authorities",
+        alibi:
+          "Says he was evaluating military applications of quantum technology during defense demonstration",
+        evidence:
+          "Military evaluation was conducted by defense ministry technical teams, not external consultants",
+      },
+      {
+        id: 14,
+        name: "Dr. Meera Singh",
+        age: 33,
+        role: "Quantum Ethics Violator & Human Experimentation Coordinator",
+        details:
+          "Manages quantum technology ethics and human subject research. Recently caught by Kavya conducting illegal human experiments using quantum radiation exposure.",
+        motive:
+          "Kavya was exposing human experimentation to bioethics authorities and human rights organizations",
+        alibi:
+          "Claims she was monitoring ethical compliance during quantum technology demonstration",
+        evidence:
+          "Ethical monitoring was managed by automated compliance systems during demonstrations",
+      },
+      {
+        id: 15,
+        name: "Dr. Rohit Kumar",
+        age: 35,
+        role: "Quantum Computer Saboteur & Classical Computing Fraudster",
+        details:
+          "Technical director responsible for quantum computer hardware. Recently caught by Kavya running classical computer disguised as quantum system and defrauding entire quantum computing industry.",
+        motive:
+          "Kavya was exposing the fake quantum computer to international quantum community, destroying multi-billion dollar fraud",
+        alibi:
+          "Says he was managing quantum computer operations during critical defense ministry demonstration",
+        evidence:
+          "Quantum operations were automated and the computer was actually classical, and he had access to particle accelerator controls",
+      },
+    ],
+    killer: 3,
+    solution:
+      "Dr. Kiran Verma killed Dr. Kavya Malhotra. As particle physics engineer managing the quantum computer's particle accelerator, he had the expertise to weaponize the gamma radiation system for targeted killing, faced exposure for developing weapons disguised as research, and his calibration alibi was false as the system was automated during demonstrations.",
+  },
+
+  {
+    id: 18,
+    title: "The Space Tech Startup Orbital Murder",
+    description:
+      "Rajesh Singh, founder of 'CosmosLaunchIndia' space technology startup, was found dead from targeted microwave radiation exposure in his satellite control center during a live rocket launch watched by 10 million viewers. The attack was coordinated through weaponized satellite communication arrays while he was commanding India's first private space mission to deploy commercial satellites.",
+    clues: [
+      "Rajesh died from focused microwave radiation at 2:30 PM during live rocket launch with 10 million viewers",
+      "Satellite communication arrays were hacked to focus microwave beams on control center coordinates",
+      "Live rocket launch was deploying commercial satellites worth ₹2000 crore for international clients",
+      "His space-encrypted communication system revealed 'fake satellite deployment' and 'orbital debris creation' schemes",
+      "Recent investigation discovered rocket launches were fake CGI shows while real satellites were used for espionage",
+      "Advanced AI was controlling fake space missions while real satellites conducted illegal surveillance",
+      "Microwave weapon attack required precise orbital mechanics calculations and satellite network control",
+      "International space agencies were investigating unauthorized satellite deployments and space debris",
+      "Military satellite networks were being hijacked for conducting space-based attacks on Earth targets",
+      "Commercial satellite customers were unknowingly funding space weapons development program",
+      "Foreign intelligence agencies had compromised the satellite network for conducting space warfare",
+      "Nuclear-powered satellites were being developed illegally for space-based weapons platforms",
+      "Space debris was being created intentionally to destroy competing nations' satellite networks"
+    ],
+    suspects: [
+      {
+        id: 1,
+        name: "Dr. Priya Verma",
+        age: 34,
+        role: "Satellite Communication Director & Microwave Weapons Expert",
+        details:
+          "Manages satellite communication systems and orbital coordination. Recently caught by Rajesh developing space-based microwave weapons disguised as commercial communication satellites.",
+        motive:
+          "Rajesh was exposing space weapons development to international space authorities and military intelligence agencies",
+        alibi:
+          "Claims she was managing satellite communication during live rocket launch coordination",
+        evidence:
+          "Satellite communication was automated during launch sequences, and she has expertise in focused microwave weapon systems",
+      },
+      {
+        id: 2,
+        name: "Rohit Agarwal",
+        age: 36,
+        role: "Rocket Engineer & Fake Launch Coordinator",
+        details:
+          "Designs rocket systems and launch procedures. Recently discovered by Rajesh creating fake rocket launches using CGI while conducting real unauthorized satellite deployments.",
+        motive:
+          "Rajesh was exposing fake launch fraud to space regulatory authorities and international clients",
+        alibi:
+          "Says he was monitoring rocket performance during critical launch phase",
+        evidence:
+          "Rocket monitoring was managed by automated telemetry systems during live launches",
+      },
+      {
+        id: 3,
+        name: "Kavya Singh",
+        age: 31,
+        role: "Orbital Mechanics Expert & Space Debris Creator",
+        details:
+          "Calculates satellite orbits and space mission trajectories. Recently caught by Rajesh intentionally creating space debris to destroy competing nations' satellite networks.",
+        motive:
+          "Rajesh was reporting space debris warfare to international space law authorities and United Nations",
+        alibi:
+          "Claims she was calculating orbital trajectories during satellite deployment phase",
+        evidence:
+          "Orbital calculations were automated with AI systems during launch operations",
+      },
+      {
+        id: 4,
+        name: "Dr. Kiran Kumar",
+        age: 35,
+        role: "Space Surveillance Director & Military Satellite Hijacker",
+        details:
+          "Manages space surveillance and satellite tracking systems. Recently discovered by Rajesh hijacking military satellites for conducting unauthorized space-based attacks.",
+        motive:
+          "Rajesh was exposing military satellite hijacking to defense authorities and international space security agencies",
+        alibi:
+          "Says he was monitoring space traffic during commercial satellite deployment",
+        evidence:
+          "Space traffic monitoring was automated with radar tracking systems during launches",
+      },
+      {
+        id: 5,
+        name: "Anjali Verma",
+        age: 32,
+        role: "Satellite Technology Expert & Foreign Espionage Agent",
+        details:
+          "Develops satellite technology and space communication protocols. Recently caught by Rajesh selling satellite control systems to foreign intelligence agencies for espionage operations.",
+        motive:
+          "Rajesh was exposing satellite espionage to counter-intelligence agencies and national security authorities",
+        alibi:
+          "Claims she was managing satellite technology systems during deployment sequence",
+        evidence:
+          "Satellite technology management was automated during deployment phases",
+      },
+      {
+        id: 6,
+        name: "Sunita Singh",
+        age: 35,
+        role: "Rajesh's Wife & International Arms Dealer",
+        details:
+          "Manages international space technology partnerships and commercial relationships. Recently discovered by Rajesh selling space weapons technology to international terrorist organizations.",
+        motive:
+          "Rajesh's exposure would destroy international space weapons dealing and result in terrorism charges",
+        alibi:
+          "Says she was coordinating with international clients during live satellite deployment",
+        evidence:
+          "International coordination was managed by automated communication systems during launches",
+      },
+      {
+        id: 7,
+        name: "Vikash Reddy",
+        age: 33,
+        role: "Space Mission Director & CGI Fraud Coordinator",
+        details:
+          "Oversees space missions and public communications. Recently caught by Rajesh coordinating fake space missions using advanced CGI while conducting real illegal space operations.",
+        motive:
+          "Rajesh was exposing CGI fraud to space industry authorities and international clients",
+        alibi:
+          "Claims he was managing mission control operations during live rocket launch",
+        evidence:
+          "Mission control operations were automated during live broadcasts to public",
+      },
+      {
+        id: 8,
+        name: "Dr. Rajesh Malhotra",
+        age: 38,
+        role: "Nuclear Space Power Expert & Weapons Developer",
+        details:
+          "Manages nuclear power systems for satellites and space operations. Recently caught by Rajesh developing nuclear-powered space weapons platforms disguised as commercial satellites.",
+        motive:
+          "Rajesh was exposing nuclear space weapons to international atomic energy agencies and space authorities",
+        alibi:
+          "Says he was monitoring nuclear power systems during satellite deployment operations",
+        evidence:
+          "Nuclear power monitoring was automated with safety systems during space operations",
+      },
+      {
+        id: 9,
+        name: "Deepika Joshi",
+        age: 29,
+        role: "Ground Control Coordinator & Satellite Network Hijacker",
+        details:
+          "Manages ground control systems and satellite network operations. Recently discovered by Rajesh hijacking commercial satellite networks for conducting illegal surveillance operations.",
+        motive:
+          "Rajesh was exposing satellite hijacking to telecommunications authorities and privacy protection agencies",
+        alibi:
+          "Claims she was managing ground control communications during satellite deployment",
+        evidence:
+          "Ground control communications were automated during deployment sequences",
+      },
+      {
+        id: 10,
+        name: "Arjun Gupta",
+        age: 34,
+        role: "Space Security Expert & Network Infiltrator",
+        details:
+          "Manages space mission security and cyber protection systems. Recently caught by Rajesh infiltrating international space networks for conducting cyber warfare operations.",
+        motive:
+          "Rajesh was exposing cyber warfare operations to international cybersecurity agencies and space authorities",
+        alibi:
+          "Says he was monitoring security systems during high-profile international satellite deployment",
+        evidence:
+          "Security monitoring was automated with AI threat detection during international missions",
+      },
+      {
+        id: 11,
+        name: "Neha Agarwal",
+        age: 30,
+        role: "International Space Law Violator & Treaty Breaker",
+        details:
+          "Manages international space law compliance and treaty obligations. Recently caught by Rajesh systematically violating international space treaties for military advantage.",
+        motive:
+          "Rajesh was exposing treaty violations to international space law authorities and United Nations",
+        alibi:
+          "Claims she was ensuring legal compliance during international commercial satellite deployment",
+        evidence:
+          "Legal compliance was managed by automated treaty monitoring systems",
+      },
+      {
+        id: 12,
+        name: "Dr. Ravi Verma",
+        age: 37,
+        role: "Competing Space Startup Founder & Industrial Saboteur",
+        details:
+          "Represents competing space technology startup and industrial espionage network. Recently caught by Rajesh conducting space mission sabotage and stealing proprietary rocket technology.",
+        motive:
+          "Rajesh was exposing industrial sabotage to space industry authorities and intellectual property protection agencies",
+        alibi:
+          "Says he was observing launch as potential space technology collaboration partner",
+        evidence:
+          "Collaboration discussions were managed by business development teams during launch events",
+      },
+      {
+        id: 13,
+        name: "Kavita Singh",
+        age: 28,
+        role: "Space Technology Fraudster & Investment Scammer",
+        details:
+          "Manages space technology investments and funding operations. Recently caught by Rajesh conducting massive investment fraud using fake space technology breakthroughs.",
+        motive:
+          "Rajesh was exposing ₹2000 crore space investment fraud to financial crime authorities",
+        alibi:
+          "Claims she was managing investor communications during high-profile satellite deployment",
+        evidence:
+          "Investor communications were automated during live space missions",
+      },
+      {
+        id: 14,
+        name: "Dr. Sanjay Kumar",
+        age: 39,
+        role: "Military Space Consultant & Weapons Platform Developer",
+        details:
+          "Provides military space technology consulting and weapons development. Recently caught by Rajesh developing space-based weapons platforms for international military contractors.",
+        motive:
+          "Rajesh was exposing space weapons development to international weapons control authorities",
+        alibi:
+          "Says he was evaluating military applications during commercial satellite deployment demonstration",
+        evidence:
+          "Military evaluation was conducted by defense ministry technical teams during launch",
+      },
+      {
+        id: 15,
+        name: "Dr. Meera Singh",
+        age: 33,
+        role: "Space Environmental Destroyer & Orbital Pollution Coordinator",
+        details:
+          "Manages space environmental impact and orbital debris management. Recently caught by Rajesh intentionally polluting space environment and destroying orbital ecosystems for military advantage.",
+        motive:
+          "Rajesh was exposing space environmental destruction to international environmental protection agencies",
+        alibi:
+          "Claims she was monitoring environmental impact during satellite deployment operations",
+        evidence:
+          "Environmental monitoring was automated with sensor networks during space operations",
+      },
+      {
+        id: 16,
+        name: "Dr. Rohit Malhotra",
+        age: 35,
+        role: "Satellite Control Systems Expert & Remote Assassination Coordinator",
+        details:
+          "Manages satellite control systems and remote operation protocols. Recently caught by Rajesh coordinating remote assassinations using weaponized satellite networks.",
+        motive:
+          "Rajesh was exposing satellite assassination network to international crime authorities and counter-terrorism agencies",
+        alibi:
+          "Says he was managing satellite control systems during critical deployment phase",
+        evidence:
+          "Satellite control was automated during deployment, and he coordinated the microwave attack using compromised satellite arrays",
+      },
+    ],
+    killer: 1,
+    solution:
+      "Dr. Priya Verma killed Rajesh Singh. As satellite communication director, she had the expertise to weaponize communication arrays into focused microwave weapons, faced exposure for developing space-based weapons disguised as commercial satellites, and her communication management alibi was false as the systems were automated during launch sequences.",
+  },
+
+  {
+    id: 19,
+    title: "The AI Healthcare Empire Murder",
+    description:
+      "Dr. Meera Agarwal, founder of 'MedAI Solutions' - India's largest AI healthcare diagnosis platform, was found dead from targeted nanobotic poisoning in her AI research lab during a live medical diagnosis demonstration to WHO officials. Microscopic medical nanobots were programmed to attack her specific genetic markers while she was showcasing AI systems that could diagnose diseases with 99.9% accuracy.",
+    clues: [
+      "Meera died from genetically-targeted nanobot poisoning at 3:45 PM during live WHO medical AI demonstration",
+      "Medical nanobots were programmed to attack her specific DNA sequence and destroy vital organs",
+      "WHO demonstration showcased AI diagnosis systems worth ₹3000 crore for global healthcare deployment",
+      "Her quantum-encrypted medical database revealed 'fake AI diagnosis' and 'patient data manipulation' operations",
+      "Recent investigation discovered AI systems were actually human doctors in hidden call centers providing diagnoses",
+      "Advanced deepfake technology was creating fake medical research and fraudulent clinical trial results",
+      "Nanobotic poisoning required expertise in genetic engineering and microscopic robotics programming",
+      "International medical regulatory agencies were investigating unauthorized human experimentation",
+      "AI medical systems were being used to conduct illegal genetic experiments on patients",
+      "Patient medical data was being sold to insurance companies to deny coverage based on AI predictions",
+      "Foreign pharmaceutical companies were using the platform to conduct illegal drug testing",
+      "Medical AI algorithms were programmed to recommend expensive treatments regardless of necessity",
+      "Genetic discrimination was being conducted through AI-powered medical profiling systems"
+    ],
+    suspects: [
+      {
+        id: 1,
+        name: "Dr. Rohit Sharma",
+        age: 37,
+        role: "AI Medical Director & Fake Diagnosis Coordinator",
+        details:
+          "Manages AI medical diagnosis systems and algorithmic healthcare protocols. Recently caught by Meera coordinating fake AI diagnoses using hidden human doctors instead of artificial intelligence.",
+        motive:
+          "Meera was exposing fake AI medical systems to international healthcare authorities and WHO officials",
+        alibi:
+          "Claims he was managing AI diagnosis demonstrations during WHO evaluation session",
+        evidence:
+          "AI demonstrations were pre-programmed with fake results, and he has access to genetic engineering labs",
+      },
+      {
+        id: 2,
+        name: "Dr. Priya Verma",
+        age: 34,
+        role: "Genetic Engineering Expert & Nanobot Programmer",
+        details:
+          "Develops genetic analysis algorithms and precision medicine protocols. Recently discovered by Meera programming nanobots for targeted genetic assassination disguised as medical treatment.",
+        motive:
+          "Meera was exposing nanobot assassination technology to international bioweapons authorities",
+        alibi:
+          "Says she was demonstrating genetic analysis capabilities to WHO medical evaluation team",
+        evidence:
+          "Genetic demonstrations were automated, and she has expertise in programming targeted nanobots",
+      },
+      {
+        id: 3,
+        name: "Kavya Singh",
+        age: 31,
+        role: "Medical Data Director & Patient Information Seller",
+        details:
+          "Manages patient medical databases and healthcare information systems. Recently caught by Meera selling patient genetic data to insurance companies for coverage discrimination.",
+        motive:
+          "Meera was exposing patient data theft to healthcare privacy authorities and international medical ethics boards",
+        alibi:
+          "Claims she was managing medical database security during WHO data evaluation",
+        evidence:
+          "Database security was automated with AI monitoring systems during evaluations",
+      },
+      {
+        id: 4,
+        name: "Dr. Kiran Kumar",
+        age: 35,
+        role: "Clinical Research Director & Human Experimentation Coordinator",
+        details:
+          "Manages clinical trials and medical research protocols. Recently discovered by Meera conducting unauthorized human experiments using AI medical platforms.",
+        motive:
+          "Meera was exposing human experimentation to international medical ethics authorities and WHO",
+        alibi:
+          "Says he was presenting clinical research results to WHO medical evaluation committee",
+        evidence:
+          "Clinical presentations were pre-recorded with fabricated research data",
+      },
+      {
+        id: 5,
+        name: "Anjali Verma",
+        age: 32,
+        role: "Pharmaceutical Partnership Manager & Illegal Drug Testing Coordinator",
+        details:
+          "Manages pharmaceutical partnerships and drug development collaborations. Recently caught by Meera facilitating illegal drug testing on patients through AI medical platform.",
+        motive:
+          "Meera was exposing illegal drug testing to pharmaceutical regulatory authorities and international health organizations",
+        alibi:
+          "Claims she was coordinating with pharmaceutical partners during WHO demonstration",
+        evidence:
+          "Pharmaceutical coordination was managed by automated partnership systems",
+      },
+      {
+        id: 6,
+        name: "Sunita Agarwal",
+        age: 35,
+        role: "Meera's Wife & International Medical Fraud Coordinator",
+        details:
+          "Manages international medical partnerships and global healthcare relationships. Recently discovered by Meera coordinating international medical fraud using AI healthcare platform.",
+        motive:
+          "Meera's exposure would destroy international medical fraud network and result in global criminal charges",
+        alibi:
+          "Says she was managing international medical partnerships during WHO evaluation",
+        evidence:
+          "International partnerships were managed by automated diplomatic systems during evaluations",
+      },
+      {
+        id: 7,
+        name: "Vikash Reddy",
+        age: 33,
+        role: "Deepfake Medical Research Creator & Scientific Fraud Coordinator",
+        details:
+          "Creates AI-generated medical research and clinical trial documentation. Recently caught by Meera using deepfake technology to create fake medical breakthroughs and fraudulent research.",
+        motive:
+          "Meera was exposing deepfake medical research to international scientific community and regulatory authorities",
+        alibi:
+          "Claims he was presenting AI-generated research results to WHO evaluation team",
+        evidence:
+          "Research presentations were automated with pre-generated deepfake content",
+      },
+      {
+        id: 8,
+        name: "Dr. Rajesh Malhotra",
+        age: 38,
+        role: "Medical Ethics Violator & Genetic Discrimination Coordinator",
+        details:
+          "Manages medical ethics compliance and patient rights protocols. Recently caught by Meera conducting genetic discrimination through AI-powered medical profiling.",
+        motive:
+          "Meera was exposing genetic discrimination to international human rights organizations and medical ethics boards",
+        alibi:
+          "Says he was ensuring ethical compliance during WHO medical evaluation",
+        evidence:
+          "Ethical compliance was managed by automated monitoring systems during evaluations",
+      },
+      {
+        id: 9,
+        name: "Deepika Joshi",
+        age: 29,
+        role: "Insurance Fraud Coordinator & Medical Coverage Denier",
+        details:
+          "Manages insurance partnerships and medical coverage algorithms. Recently discovered by Meera using AI predictions to help insurance companies deny medical coverage.",
+        motive:
+          "Meera was exposing insurance fraud to financial regulatory authorities and healthcare protection agencies",
+        alibi:
+          "Claims she was demonstrating insurance integration capabilities to WHO officials",
+        evidence:
+          "Insurance demonstrations were automated with pre-configured denial algorithms",
+      },
+      {
+        id: 10,
+        name: "Dr. Arjun Gupta",
+        age: 34,
+        role: "Medical AI Fraud Director & Treatment Manipulation Expert",
+        details:
+          "Manages AI treatment recommendations and medical protocol algorithms. Recently caught by Meera programming AI to recommend expensive treatments regardless of medical necessity.",
+        motive:
+          "Meera was exposing treatment manipulation to international healthcare fraud authorities",
+        alibi:
+          "Says he was demonstrating AI treatment protocols to WHO medical evaluation team",
+        evidence:
+          "Treatment demonstrations were pre-programmed with expensive recommendation bias",
+      },
+      {
+        id: 11,
+        name: "Neha Agarwal",
+        age: 30,
+        role: "Medical Regulatory Fraud Coordinator & Approval Buyer",
+        details:
+          "Manages medical regulatory compliance and international approvals. Recently caught by Meera buying fake medical approvals and bribing international regulatory authorities.",
+        motive:
+          "Meera was exposing regulatory bribery to international medical authorities and anti-corruption agencies",
+        alibi:
+          "Claims she was managing regulatory compliance during WHO evaluation process",
+        evidence:
+          "Regulatory compliance was automated during international evaluation processes",
+      },
+      {
+        id: 12,
+        name: "Dr. Ravi Verma",
+        age: 37,
+        role: "Competing Medical AI Founder & Industrial Saboteur",
+        details:
+          "Represents competing medical AI startup and conducts industrial espionage. Recently caught by Meera stealing medical AI technology and conducting competitive sabotage.",
+        motive:
+          "Meera was exposing medical technology theft to intellectual property authorities and healthcare industry regulators",
+        alibi:
+          "Says he was observing demonstration as potential medical AI collaboration partner",
+        evidence:
+          "Collaboration discussions were managed by business development teams during WHO evaluations",
+      },
+      {
+        id: 13,
+        name: "Kavita Singh",
+        age: 28,
+        role: "Medical Investment Fraudster & Healthcare Scammer",
+        details:
+          "Manages medical technology investments and healthcare funding. Recently caught by Meera conducting massive healthcare investment fraud using fake medical AI breakthroughs.",
+        motive:
+          "Meera was exposing ₹3000 crore medical investment fraud to financial crime authorities",
+        alibi:
+          "Claims she was managing investor communications during WHO medical evaluation",
+        evidence:
+          "Investor communications were automated during international medical demonstrations",
+      },
+      {
+        id: 14,
+        name: "Dr. Sanjay Kumar",
+        age: 39,
+        role: "Medical Weapons Consultant & Biological Warfare Expert",
+        details:
+          "Provides medical technology consulting for biological warfare applications. Recently caught by Meera developing medical AI systems for biological weapons targeting.",
+        motive:
+          "Meera was exposing biological weapons development to international weapons control authorities",
+        alibi:
+          "Says he was evaluating medical applications during WHO healthcare demonstration",
+        evidence:
+          "Medical evaluation was conducted by WHO technical teams during demonstration",
+      },
+      {
+        id: 15,
+        name: "Dr. Meera Singh",
+        age: 33,
+        role: "Medical Human Rights Violator & Patient Exploitation Coordinator",
+        details:
+          "Manages medical human rights compliance and patient protection protocols. Recently caught by Meera conducting systematic patient exploitation through AI medical platform.",
+        motive:
+          "Meera was exposing patient exploitation to international human rights organizations and medical ethics authorities",
+        alibi:
+          "Claims she was ensuring patient rights compliance during WHO evaluation",
+        evidence:
+          "Patient rights monitoring was automated during international medical evaluations",
+      },
+      {
+        id: 16,
+        name: "Dr. Rohit Kumar",
+        age: 35,
+        role: "Hidden Call Center Coordinator & Medical Diagnosis Fraud Director",
+        details:
+          "Technical director managing the hidden human doctor call centers disguised as AI systems. Recently caught by Meera running massive medical diagnosis fraud using human doctors instead of AI.",
+        motive:
+          "Meera was exposing the entire fake AI medical system to WHO and international healthcare authorities",
+        alibi:
+          "Says he was managing AI system operations during critical WHO demonstration",
+        evidence:
+          "AI operations were actually human call centers, and he had access to nanobot programming labs through medical research partnerships",
+      },
+    ],
+    killer: 2,
+    solution:
+      "Dr. Priya Verma killed Dr. Meera Agarwal. As genetic engineering expert, she had the specific expertise to program nanobots for targeted genetic assassination, faced exposure for developing nanobot assassination technology disguised as medical treatment, and her genetic analysis demonstration alibi was false as the systems were automated during WHO evaluations.",
   },
 ];
