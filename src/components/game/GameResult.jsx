@@ -26,12 +26,14 @@ export const GameResult = ({ gameState, scenario, onTryAgain }) => {
         <p className="text-sm text-red-700 mb-3">
           That's not the killer. Study the evidence more carefully.
         </p>
-        <div className="bg-white p-3 rounded border">
-          <p className="text-sm"><strong>Correct Answer:</strong> {scenario.solution}</p>
+        <div className="bg-white text-black! p-3 rounded border">
+          <p className="text-sm">
+            <strong>Correct Answer:</strong> {scenario.solution}
+          </p>
         </div>
-        <button 
+        <button
           onClick={onTryAgain}
-          className="w-full mt-3 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          className="w-full mt-3 px-4 py-2 bg-black! text-white rounded hover:bg-blue-600"
         >
           Try Again
         </button>
